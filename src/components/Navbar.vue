@@ -48,7 +48,6 @@
     color: #333;
     font-family: sans-serif;
     font-size: 20px;
-    margin: ;
 }
 
 #nav a.router-link-active {
