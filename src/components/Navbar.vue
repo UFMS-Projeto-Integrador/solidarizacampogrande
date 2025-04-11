@@ -1,7 +1,9 @@
 <template>
     <div id="Header">
         <div id="img-logo">
-        <h1>SOLIDARIZA CG</h1>
+            <router-link to="/" style="text-decoration: none; color: inherit;">
+               <img src="@/assets/logo.svg" alt="Logo Solidariza CG">
+            </router-link>
         </div>
         <div id="nav">
             <router-link to="/">Inicio</router-link> 
@@ -28,12 +30,18 @@
     box-sizing: border-box;
 }
 
+#img-logo img {
+    width: 360px;  
+    height: auto;  
+}
+
 #Header{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     padding: 50px;
+    
     
 }
 #nav {

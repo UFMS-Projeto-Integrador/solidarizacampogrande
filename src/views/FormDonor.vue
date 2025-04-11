@@ -34,9 +34,6 @@
     <textarea id="necessidades" name="necessidades" rows="4" required
     maxlength="400" placeholder="Descreva os itens que será doando (Ex: 5 camisas, 10 kg de arroz..."></textarea>
 
-    <!-- Imagem/Foto da Doação -->
-    <label for="imagem">Anexe uma foto dos itens doados (opcional)</label>
-    <input type="file" id="imagem" name="imagem" accept="image/*">
 
     <input type="submit" value="Cadastrar">
 

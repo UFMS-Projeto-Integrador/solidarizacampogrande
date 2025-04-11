@@ -1,7 +1,6 @@
 <template>
     <div id="about">
         <div id="about-text">
-            <h1>Solidariza CG</h1>
             <h3>Conectando Corações,<br> Transformando Vidas.</h3>
             <button id="btn-doe">
                 Doe Agora!
@@ -34,6 +33,7 @@
 
 #about-text{
     font-family: sans-serif;
+    font-size: 24px;
 }
 
 #btn-doe{
