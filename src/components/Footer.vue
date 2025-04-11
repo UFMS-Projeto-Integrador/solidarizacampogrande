@@ -17,6 +17,6 @@
     background-color: #007BFF;
     color: #333;
     text-align: center;
-    padding: 22cqmax;
+    padding: 22px;
 }
 </style>
