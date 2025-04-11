@@ -2,7 +2,7 @@
     <div id="about">
         <div id="about-text">
             <h3>Conectando Corações,<br> Transformando Vidas.</h3>
-            <button id="btn-doe">
+            <button id="btn-doe" @click="goToForm">
                 Doe Agora!
             </button>
         </div>
@@ -15,6 +15,11 @@
 <script>
     export default {
         name: 'About',
+        methods:{
+            goToForm(){
+                this.$router.push('/Doador')
+            }
+        }
     }
 </script>
 
