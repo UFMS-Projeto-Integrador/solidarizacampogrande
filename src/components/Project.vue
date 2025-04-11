@@ -34,9 +34,9 @@
 #project {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    padding: 20px;
-    justify-content: space-around;
+    align-items: center;  
+    padding: 22px;
+    justify-content: space-around;     
 }
 
 #img-projeto img {

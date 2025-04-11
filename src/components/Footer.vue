@@ -12,7 +12,7 @@
     }
 </script>
 
-<style scoped>
+<style>
 #footer {
     background-color: #007BFF;
     color: #333;

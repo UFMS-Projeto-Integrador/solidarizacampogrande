@@ -23,15 +23,15 @@
 
 </script>
 
-<style scoped>
+<style>
 *{
     padding: 0;
-    margin: 0 50px;
+    margin: 0;
     box-sizing: border-box;
 }
 
 #img-logo img {
-    width: 360px;  
+    width: 55vh;  
     height: auto;  
 }
 
@@ -40,13 +40,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 50px;
-    
-    
+    padding: 8vh;
 }
+
 #nav {
     background-color: #007BFF;
-    padding: 15px;
+    padding: 10px;
     border-radius: 28px;
 }
 
@@ -55,7 +54,8 @@
     text-decoration: none;
     color: #333;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 1.3rem;
+    margin: 1vh;
 }
 
 #nav a.router-link-active {
