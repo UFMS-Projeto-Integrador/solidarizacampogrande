@@ -1,8 +1,11 @@
 <template>
     <div id="about">
         <div id="about-text">
-        <h1>Solidariza CG</h1>
-        <h3>Conectando Corações,<br> Transformando Vidas.</h3>
+            <h1>Solidariza CG</h1>
+            <h3>Conectando Corações,<br> Transformando Vidas.</h3>
+            <button id="btn-doe">
+                Doe Agora!
+            </button>
         </div>
         <div id="about-img">
             <img src="@/assets/doacao.avif" alt="logo">
@@ -27,5 +30,25 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+#about-text{
+    font-family: sans-serif;
+}
+
+#btn-doe{
+    background-color: #007BFF;
+    margin-top: 40px;
+    padding: 10px 40px;
+    font-family: sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    color: yellow;
+}
+
+#btn-doe:hover{
+    color: #007BFF;
+    background-color: yellow;
 }
 </style>
