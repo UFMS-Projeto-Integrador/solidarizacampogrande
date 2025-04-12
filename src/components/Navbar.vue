@@ -5,26 +5,30 @@
                <img src="@/assets/logo.svg" alt="Logo Solidariza CG">
             </router-link>
         </div>
-        <div id="nav">
-            <router-link to="/">Inicio</router-link> 
-            <router-link to="/Beneficiario">Beneficiário</router-link>
-            <router-link to="/Doador">Doador</router-link>
-            <router-link to="/Ongs">Ongs</router-link>
-            <router-link to="/Contato">Contato</router-link>
+        <div id="nav-container">
+            <div id="nav">
+                <router-link to="/">Inicio</router-link> 
+                <router-link to="/Beneficiario">Beneficiário</router-link>
+                <router-link to="/Doador">Doador</router-link>
+                <router-link to="/Ongs">Ongs</router-link>
+                <router-link to="/Contato">Contato</router-link>
+            </div>
+            <router-link to="/Login" style="text-decoration: none; color: inherit;">
+                <img src="@/assets/login.png" alt="Foto login" id="foto-login">
+            </router-link>
+            
         </div>
     </div>
-
 </template>
 
 <script>
     export default {
         name: 'Navbar',
     }
-
 </script>
 
 <style>
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -35,12 +39,18 @@
     height: auto;  
 }
 
-#Header{
+#Header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    padding: 8vh;
+    justify-content: space-between; 
+    padding: 2vh 22vh; 
+}
+
+#nav-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
 }
 
 #nav {
@@ -62,5 +72,10 @@
     font-weight: bold;
     color: yellow;
     padding: 0px 12px;
+}
+
+#foto-login {
+    width: 30px;
+    cursor: pointer; 
 }
 </style>

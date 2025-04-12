@@ -39,27 +39,11 @@
 
         <label for="tipo_doacao">Tipo de Doação</label>
         <select id="tipo_doacao" name="tipo_doacao" required>
-        <option value=""></option>
+        <option value="">Selecione o tipo de doação</option>
         <option value="roupas">Roupas</option>
         <option value="alimentos">Alimentos</option>
         <option value="produtos_higiene">Produtos de Higiene</option>
         <option value="outros">Outros</option>
-        </select>
-
-        <label for="frequencia">Frequência de Doação</label>
-        <select id="frequencia" name="frequencia" required>
-        <option value=""></option>
-        <option value="unica">Única</option>
-        <option value="semanal">Semanal</option>
-        <option value="mensal">Mensal</option>
-        <option value="sob_demanda">Sob Demanda</option>
-        </select>
-
-        <label for="voluntarios_ong">A ONG necessita de voluntários?</label>
-        <select id="voluntarios_ong" name="voluntarios_ong" required aria-label="Necessidade de voluntários">
-        <option value="voluntarios_ong"> </option>
-        <option value="sim">Sim</option>
-        <option value="nao">Não</option>
         </select>
 
         <!-- Botão de Envio -->
@@ -76,3 +60,96 @@
     name: 'FormOngs'
   }
 </script>
+
+<style scoped>
+#ContainerOngs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+#ContainerOngs h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+#formDoador {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+#formDoador label {
+  color: #333;
+  font-size: 1rem;
+  text-align: left;
+}
+
+#formDoador input[type="text"],
+#formDoador input[type="email"],
+#formDoador input[type="tel"],
+#formDoador textarea,
+#formDoador select {
+  width: 100%;
+  padding: 0rem 1rem;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+#formDoador textarea {
+  padding: 1rem;
+  height: auto;
+  resize: vertical;
+}
+
+#formDoador input:focus,
+#formDoador textarea:focus,
+#formDoador select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+#formDoador input::placeholder,
+#formDoador textarea::placeholder {
+  color: #999;
+  text-align: left;
+}
+
+#formDoador select {
+  background-color: #fff;
+}
+
+#formDoador input[type="submit"] {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#formDoador input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+</style>

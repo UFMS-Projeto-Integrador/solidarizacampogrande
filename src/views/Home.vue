@@ -1,22 +1,130 @@
 <template>
-    <About />
-    <Project />
+  <div id="home">
+    
+    <!-- Seção About -->
+    <div id="about">
+      <div id="about-text">
+        <h3>Conectando Corações,<br> Transformando Vidas.</h3>
+        <button id="btn-doe" @click="goToForm">
+          Doe Agora!
+        </button>
+      </div>
+      <div id="about-img">
+        <img src="@/assets/doacao.avif" alt="logo">
+      </div>
+    </div>
+
+    <!-- Seção Project -->
+    <div id="project">
+      <div id="img-projeto">
+        <img src="@/assets/doacao2.avif" alt="Doação">
+      </div>
+
+      <div id="apresentacao-projeto">
+        <div id="title-projeto">
+          <h2 id="title-project">O projeto</h2>
+        </div>
+        <div id="text-projeto">
+          <p>O projeto Solidariza CG surgiu da constatação da dificuldade de
+            comunicação entre instituições que promovem ações sociais bre a população que deseja
+            contribuir com essas iniciativas em Campo Grande, MS. A ausência de uma plataforma
+            centralizada compromete a efetividade das campanhas solidárias e a visibilidade das
+            entidades envolvidas. A ação busca desenvolver uma solução digital que conecte doadores,
+            voluntários e instituições, promovendo maior engajamento comunitário e facilitando o
+            acesso às informações sobre campanhas ativas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import About from '@/components/About.vue';
-import Project from '@/components/Project.vue';
-
-
 export default {
-  name: 'Home', 
-  components: {
-    About, 
-    Project
+  name: 'Home',
+  methods: {
+    goToForm() {
+      this.$router.push('/Doador')
+    }
   }
 }
 </script>
 
 <style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+#about {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px 70px;
+
+}
+
+#about-text {
+  font-family: sans-serif;
+  font-size: 24px;
+}
+
+#btn-doe {
+  background-color: #007BFF;
+  margin-top: 40px;
+  padding: 10px 40px;
+  font-family: sans-serif;
+  font-size: 18px;
+  border: none;
+  border-radius: 20px;
+  color: yellow;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#btn-doe:hover {
+  color: #007BFF;
+  background-color: yellow;
+}
+
+#title-project {
+  font-family: sans-serif;
+  color: #007BFF;
+  margin-top: 40px;
+}
+
+#project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 22px;
+  justify-content: space-around;
+}
+
+#img-projeto img {
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#text-projeto {
+  width: 500px;
+  height: 320px;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#text-projeto p {
+  text-align: justify;
+  margin: 0;
+  font-size: 18px;
+  font-family: sans-serif;
+}
 </style>

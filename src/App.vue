@@ -1,12 +1,12 @@
 <template>
   <div class="app-layout">
-    <Navbar />
+    <Navbar v-if="!$route.meta.hideNavbar" />
 
     <main class="content">
       <router-view />
     </main>
 
-    <Footer />
+    <Footer v-if="!$route.meta.hideNavbar" />
   </div>
 </template>
 
@@ -26,6 +26,8 @@ export default {
 html, body{
   height: 100%;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .app-layout {
@@ -35,6 +37,6 @@ html, body{
 }
 
 .content {
-  flex: 1;
+  flex: 1 0 auto;
 }
 </style>

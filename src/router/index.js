@@ -4,6 +4,9 @@ import FormBeneficiaries from '@/views/FormBeneficiaries.vue'
 import FormDonor from '@/views/FormDonor.vue'
 import FormOngs from '@/views/FormOngs.vue'
 import Contato from '@/views/Contato.vue'
+import LoginOng from '@/views/LoginOng.vue'
+import Dashboard from '@/views/Dashboard.vue'
+
 
 const routes = [
   {
@@ -30,6 +33,19 @@ const routes = [
     path: '/Contato',
     name: 'Contato',
     component: Contato,
+  },
+  {
+    path: '/Login',
+    name: 'Login',
+    component: LoginOng,
+    meta: {
+      hideNavbar: true,
+    }
+  },
+  {
+    path: '/Dashboard',
+    name: 'Dashboard',
+    component: Dashboard
   }
 
 ]
