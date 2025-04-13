@@ -48,13 +48,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between; 
-    padding: 2vh 22vh; 
+    padding: 2vh 6vw 2vh 10vw; 
 }
 
 #nav-container {
     display: flex;
     align-items: center;
-    gap: 20px; 
+    gap: 20px;
+    margin-left: 10vw;
 }
 
 #nav {

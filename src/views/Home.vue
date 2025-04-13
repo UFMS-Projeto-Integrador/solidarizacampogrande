@@ -25,13 +25,11 @@
           <h2 id="title-project">O projeto</h2>
         </div>
         <div id="text-projeto">
-          <p>O projeto Solidariza CG surgiu da constatação da dificuldade de
-            comunicação entre instituições que promovem ações sociais bre a população que deseja
+          <p>Solidariza CG surgiu da constatação da dificuldade de
+            comunicação entre instituições que promovem ações sociais sobre a população que deseja
             contribuir com essas iniciativas em Campo Grande, MS. A ausência de uma plataforma
             centralizada compromete a efetividade das campanhas solidárias e a visibilidade das
-            entidades envolvidas. A ação busca desenvolver uma solução digital que conecte doadores,
-            voluntários e instituições, promovendo maior engajamento comunitário e facilitando o
-            acesso às informações sobre campanhas ativas.</p>
+            entidades envolvidas. A ação busca desenvolver uma solução digital que conecte doadores, voluntários e instituições, promovendo maior engajamento comunitário e facilitando o acesso às informações sobre campanhas ativas.</p>
         </div>
       </div>
     </div>
@@ -51,6 +49,14 @@ export default {
 
 <style>
 * {
+  --color-submit: #007BFF;
+  --color-title-h2: #007BFF;
+
+  --color-hover-submit: #FFCC29;
+  --color-text-btn: #FFCC29;
+
+  --color-font: black;
+
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -62,7 +68,6 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   padding: 10px 70px;
-
 }
 
 #about-text {
@@ -71,26 +76,26 @@ export default {
 }
 
 #btn-doe {
-  background-color: #007BFF;
+  background-color: var(--color-submit);
   margin-top: 40px;
   padding: 10px 40px;
   font-family: sans-serif;
   font-size: 18px;
   border: none;
   border-radius: 20px;
-  color: yellow;
+  color: var(--color-text-btn);
   cursor: pointer;
   transition: 0.3s ease;
 }
 
 #btn-doe:hover {
-  color: #007BFF;
-  background-color: yellow;
+  color: var(--color-submit);
+  background-color: var(--color-hover-submit);
 }
 
 #title-project {
   font-family: sans-serif;
-  color: #007BFF;
+  color: var(--color-title-h2);
   margin-top: 40px;
 }
 
@@ -113,6 +118,7 @@ export default {
   width: 500px;
   height: 320px;
   padding: 15px;
+  padding-right: 3vw;
   box-sizing: border-box;
   overflow: auto;
   display: flex;
@@ -123,8 +129,10 @@ export default {
 
 #text-projeto p {
   text-align: justify;
+  text-indent: 3vw;
   margin: 0;
   font-size: 18px;
   font-family: sans-serif;
+  color: var(--color-font);
 }
 </style>
