@@ -16,7 +16,7 @@
 
         <label for="email_ong">E-mail</label>
         <input type="email" id="email_ong" name="email_ong" autocomplete="email_ong" required
-        placeholder="exemplo@gmail.com">
+        maxlength="70" placeholder="exemplo@email.com">
 
         <label for="tel_ong">Telefone</label>
         <input type="tel" name="tel_ong" id="tel_ong" required maxlength="11" 
@@ -34,18 +34,6 @@
         <input type="text" id="area_atuacao" name="area_atuacao" required
         minlength="1" maxlength="50" placeholder="Ex: Assistência social">
 
-        <label for="necessidades_ong">Quais são as principais necessidades da ONG?</label>
-        <textarea id="necessidades_ong" name="necessidades_ong" rows="4" required maxlength="250" placeholder="Ex: Transporte, localização..."></textarea>
-
-        <label for="tipo_doacao">Tipo de Doação</label>
-        <select id="tipo_doacao" name="tipo_doacao" required>
-        <option value="">Selecione o tipo de doação</option>
-        <option value="roupas">Roupas</option>
-        <option value="alimentos">Alimentos</option>
-        <option value="produtos_higiene">Produtos de Higiene</option>
-        <option value="outros">Outros</option>
-        </select>
-
         <!-- Botão de Envio -->
         <input type="submit" value="Cadastrar">
 
@@ -54,7 +42,6 @@
     </div>
 </template>
 
-
 <script>
   export default {
     name: 'FormOngs'
@@ -62,6 +49,18 @@
 </script>
 
 <style scoped>
+*{
+  --color-submit-e-focus: #007BFF;
+  --color-hover-submit:#0056b3;
+  
+  --color-font-placeholder:#999;
+  --color-font: black;
+  --color-font-submit:#fff;
+  
+  --color-form:#fff;
+  --color-form-input:#ccc;
+  
+ }
 #ContainerOngs {
   display: flex;
   flex-direction: column;
@@ -74,15 +73,15 @@
 
 #ContainerOngs h2 {
   font-size: 2rem;
-  color: #333;
+  color: var(--color-font);
   margin-bottom: 2rem;
 }
 
 #formDoador {
-  background-color: #ffffff;
+  background-color: var(--color-form);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   width: 100%;
   max-width: 600px;
   display: flex;
@@ -92,9 +91,10 @@
 }
 
 #formDoador label {
-  color: #333;
-  font-size: 1rem;
+  color: var(--color-font);
+  font-size: 1.05rem;
   text-align: left;
+  font-weight: 500;
 }
 
 #formDoador input[type="text"],
@@ -105,13 +105,14 @@
   width: 100%;
   padding: 0rem 1rem;
   height: 50px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-form-input);
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s;
   box-sizing: border-box;
   text-align: left;
   margin-bottom: 1rem;
+  color: var(--color-font);
 }
 
 #formDoador textarea {
@@ -123,25 +124,25 @@
 #formDoador input:focus,
 #formDoador textarea:focus,
 #formDoador select:focus {
-  border-color: #007bff;
+  border-color: var(--color-submit-e-focus);
   outline: none;
 }
 
 #formDoador input::placeholder,
 #formDoador textarea::placeholder {
-  color: #999;
+  color: var(--color-font-placeholder);
   text-align: left;
 }
 
 #formDoador select {
-  background-color: #fff;
+  background-color: var(--color-form);
 }
 
 #formDoador input[type="submit"] {
   width: 100%;
   padding: 0.65rem 1rem;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--color-submit-e-focus);
+  color: var(--color-font-submit);
   border: none;
   border-radius: 8px;
   font-size: 1rem;
@@ -150,6 +151,6 @@
 }
 
 #formDoador input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: var(--color-hover-submit);
 }
 </style>
