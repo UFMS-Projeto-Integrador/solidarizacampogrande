@@ -47,7 +47,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 * {
   --color-submit: #007BFF;
   --color-title-h2: #007BFF;
