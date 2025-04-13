@@ -16,7 +16,7 @@
           </form>
         </div>
       </div>
-      <a to="volte"></a>
+      <button>Volte para a Tela Inicial</button>
     </div>
   </template>
   
