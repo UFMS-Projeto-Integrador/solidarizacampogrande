@@ -1,7 +1,7 @@
 <template>
     <div id="login-area">
       <div id="img-area">
-        <img src="@/assets/logo.svg" alt="Foto Tela de Login" />
+        <img src="@/assets/logo.svg" alt="Foto Tela de Login" @click="goToHome"/>
       </div>
       <div id="login">
         <div id="text-login">
@@ -16,14 +16,20 @@
           </form>
         </div>
       </div>
-      <button>Volte para a Tela Inicial</button>
+      <button id="goToHome" @click="goToHome">Volte para a Tela Inicial</button>
     </div>
   </template>
   
   <script>
   export default {
-    name: 'LoginOng'
+    name: 'LoginOng',
+    methods: {
+    goToHome() {
+      this.$router.push('/')
+    }
   }
+}
+
   </script>
   
 <style scoped>
@@ -41,6 +47,7 @@
 #img-area img {
     width: 380px;
     margin-bottom: 2rem;
+    cursor: pointer;
 }
   
 #login {
@@ -108,5 +115,17 @@
 
 #form-login button:hover {
   background-color: #0056b3;
+}
+
+#goToHome{
+  border: none;
+  background-color: transparent;
+  color: #0056b3;
+  cursor: pointer;
+  margin-top: 2vh;
+}
+
+#goToHome:hover{
+  color: #007bff;
 }
 </style>
