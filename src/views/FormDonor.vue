@@ -10,8 +10,8 @@
     placeholder="Ex: João da Silva" oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')">
 
     <label for="email">E-mail</label>
-    <input type="email" id="email" name="email" autocomplete="on" required
-    placeholder="exemplo@gmail.com">
+    <input type="email" id="email" name="email" autocomplete="on" required maxlength="70"
+    placeholder="exemplo@email.com">
 
     <label for="tel">Telefone</label>
     <input type="tel" name="tel" id="tel" required maxlength="11" 
@@ -23,11 +23,11 @@
 
     <label for="tipoDoacao">Tipo de Doação</label>
     <select id="tipoDoacao" name="tipoDoacao" required>
-    <option value=""> </option>
-    <option value="roupas">Roupas</option>
-    <option value="alimentos">Alimentos</option>
-    <option value="higiene">Produtos de Higiene</option>
-    <option value="outros">Outros</option>
+      <option value=""> </option>
+      <option value="roupas">Roupas</option>
+      <option value="alimentos">Alimentos</option>
+      <option value="higiene">Produtos de Higiene</option>
+      <option value="outros">Outros</option>
     </select>
 
     <label for="descricao_itens">Descrição dos itens</label>
@@ -49,6 +49,19 @@ export default {
 </script>
 
 <style scoped>
+*{
+  --color-submit-e-focus: #007BFF;
+  --color-hover-submit:#0056b3;
+  
+  --color-font-placeholder:#999;
+  --color-font: black;
+  --color-font-submit:#fff;
+  
+  --color-form:#fff;
+  --color-form-input:#ccc;
+  
+ }
+
 #ContainerDoador {
   display: flex;
   flex-direction: column;
@@ -61,15 +74,15 @@ export default {
 
 #ContainerDoador h2 {
   font-size: 2rem;
-  color: #333;
+  color: var(--color-font);
   margin-bottom: 2rem;
 }
 
 #formDoacao {
-  background-color: #ffffff;
+  background-color: var(--color-form);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   width: 100%;
   max-width: 600px;
   display: flex;
@@ -79,9 +92,10 @@ export default {
 }
 
 #formDoacao label {
-  color: #333;
-  font-size: 1rem;
+  color: var(--color-font);
+  font-size: 1.05rem;
   text-align: left;
+  font-weight: 500;
 }
 
 #formDoacao input[type="text"],
@@ -92,7 +106,7 @@ export default {
   width: 100%;
   padding: 0rem 1rem;
   height: 50px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-form-input);
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s;
@@ -110,25 +124,25 @@ export default {
 #formDoacao input:focus,
 #formDoacao textarea:focus,
 #formDoacao select:focus {
-  border-color: #007bff;
+  border-color: var(--color-submit-e-focus);
   outline: none;
 }
 
 #formDoacao input::placeholder,
 #formDoacao textarea::placeholder {
-  color: #999;
+  color: var(--color-font-placeholder);
   text-align: left;
 }
 
 #formDoacao select {
-  background-color: #fff;
+  background-color: var(--color-form);
 }
 
 #formDoacao input[type="submit"] {
   width: 100%;
   padding: 0.65rem 1rem;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--color-submit-e-focus);
+  color: var(--color-font-submit);
   border: none;
   border-radius: 8px;
   font-size: 1rem;
@@ -137,6 +151,6 @@ export default {
 }
 
 #formDoacao input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: var(--color-hover-submit);
 }
 </style>
