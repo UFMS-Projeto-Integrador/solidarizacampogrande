@@ -92,8 +92,8 @@
   
   --color-form:#fff;
   --color-form-input:#ccc;
-  
  }
+ 
 .container {
   display: flex;
   flex-direction: column;
