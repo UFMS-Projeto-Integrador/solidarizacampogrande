@@ -12,11 +12,17 @@
     }
 </script>
 
-<style>
+<style scoped>
+*{
+    --color-footer: #007BFF;
+    --color-font: black;
+}
 #footer {
-    background-color: #007BFF;
-    color: #333;
+    background-color: var(--color-footer);
+    color: var(--color-font);
     text-align: center;
     padding: 22px;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 </style>

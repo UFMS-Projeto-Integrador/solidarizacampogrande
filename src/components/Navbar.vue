@@ -27,8 +27,12 @@
     }
 </script>
 
-<style>
-* {
+<style scoped>
+*{
+    --color-nav: #007BFF;
+    --color-font: black;
+    --color-active: #FFCC29;
+
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -54,7 +58,7 @@
 }
 
 #nav {
-    background-color: #007BFF;
+    background-color: var(--color-nav);
     padding: 10px;
     border-radius: 28px;
 }
@@ -62,7 +66,7 @@
 #nav a {
     display: inline-block;
     text-decoration: none;
-    color: #333;
+    color: var(--color-font);
     font-family: sans-serif;
     font-size: 1.3rem;
     margin: 1vh;
@@ -70,7 +74,7 @@
 
 #nav a.router-link-active {
     font-weight: bold;
-    color: yellow;
+    color: var(--color-active);
     padding: 0px 12px;
 }
 
