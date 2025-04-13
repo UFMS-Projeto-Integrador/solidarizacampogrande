@@ -61,6 +61,7 @@
     background-color: var(--color-nav);
     padding: 10px;
     border-radius: 28px;
+    font-weight: 500;
 }
 
 #nav a {
@@ -68,7 +69,7 @@
     text-decoration: none;
     color: var(--color-font);
     font-family: sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 1vh;
 }
 
