@@ -4,105 +4,107 @@
   
       <form id="formBeneficiario" method="POST" autocomplete="off">
         <label for="nome">Nome</label>
-        <input
-          type="text"
-          id="nome"
-          name="nome"
-          required
-          minlength="5"
-          maxlength="45"
-          placeholder="Ex: João da Silva"
-          oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')"
-        />
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            required
+            minlength="5"
+            maxlength="45"
+            placeholder="Ex: João da Silva"
+            oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')">
   
         <label for="cpf">CPF</label>
-        <input
-          type="text"
-          id="cpf"
-          name="cpf"
-          required
-          maxlength="11"
-          placeholder="xxxxxxxxxxx"
-          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-        />
+          <input
+            type="text"
+            id="cpf"
+            name="cpf"
+            required
+            maxlength="11"
+            placeholder="xxxxxxxxxxx"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')">
   
         <label for="email">E-mail</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          autocomplete="on"
-          required
-          maxlength="70"
-          placeholder="exemplo@email.com"
-        />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="on"
+            required
+            maxlength="70"
+            placeholder="exemplo@email.com">
   
         <label for="tel">Telefone</label>
-        <input
-          type="tel"
-          name="tel"
-          id="tel"
-          required
-          maxlength="11"
-          placeholder="(xx) x xxxx - xxxx"
-          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-        />
-  
+          <input
+            type="tel"
+            name="tel"
+            id="tel"
+            required
+            maxlength="11"
+            placeholder="(xx) x xxxx - xxxx"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
+        <label for="cep">CEP</label>
+          <input
+            type="text"
+            id="cep"
+            name="cep"
+            required
+            maxlength="8"
+            placeholder="12345-678"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
         <label for="endereco">Endereço</label>
-        <input
-          type="text"
-          id="endereco"
-          name="endereco"
-          required
-          minlength="5"
-          maxlength="50"
-          placeholder="Rua: exemplo Nº 123"
-        />
+          <input
+            type="text"
+            id="endereco"
+            name="endereco"
+            required
+            minlength="5"
+            maxlength="50"
+            placeholder="Rua: exemplo Nº 123">
   
         <label for="bairro">Bairro</label>
-        <input
-          type="text"
-          id="bairro"
-          name="bairro"
-          required
-          minlength="3"
-          maxlength="50"
-          placeholder="Vila: exemplo"
-        />
-  
+          <input
+            type="text"
+            id="bairro"
+            name="bairro"
+            required
+            minlength="3"
+            maxlength="50"
+            placeholder="Vila: exemplo">
+    
         <label for="referencia">Ponto de Referência</label>
-        <input
-          type="text"
-          id="referencia"
-          name="referencia"
-          required
-          minlength="5"
-          maxlength="50"
-          placeholder="Próximo a ..."
-        />
+          <input
+            type="text"
+            id="referencia"
+            name="referencia"
+            required
+            minlength="5"
+            maxlength="50"
+            placeholder="Próximo a ...">
   
         <label for="familiares">Número de moradores na residência</label>
-        <input
-          type="text"
-          id="familiares"
-          name="familiares"
-          required
-          placeholder="Ex: 3"
-          maxlength="2"
-          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-        />
+          <input
+            type="text"
+            id="familiares"
+            name="familiares"
+            required
+            placeholder="Ex: 3"
+            maxlength="2"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')">
   
         <label for="necessidades">Necessidades</label>
-        <textarea
-          id="necessidades"
-          name="necessidades"
-          rows="4"
-          required
-          maxlength="400"
-          placeholder="Descreva o que está precisando (Ex: Roupas infantis, alimento, itens básicos de higiene...)"
-        ></textarea>
+          <textarea
+            id="necessidades"
+            name="necessidades"
+            rows="4"
+            required
+            maxlength="400"
+            placeholder="Descreva o que está precisando (Ex: Roupas, alimento, itens de higiene...)"></textarea>
   
         <input type="submit" value="Cadastrar" />
+        
       </form>
     </div>
   </template>

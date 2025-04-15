@@ -41,15 +41,15 @@
         />
   
         <label for="mensagem">Escreva sua mensagem</label>
-        <textarea
-          id="mensagem"
-          name="mensagem"
-          v-model="form.mensagem"
-          rows="4"
-          maxlength="500"
-          required
-          placeholder="Descrição do assunto"
-        ></textarea>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            v-model="form.mensagem"
+            rows="4"
+            maxlength="500"
+            required
+            placeholder="Descrição do assunto">
+          </textarea>
   
         <button type="submit">Enviar</button>
       </form>

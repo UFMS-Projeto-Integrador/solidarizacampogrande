@@ -1,39 +1,78 @@
 <template>
   <div id="ContainerDoador">
+    
     <h2>Cadastro de Doação</h2>
 
-  <!-- Formulário de Doação -->
     <form id="formDoacao" method="POST" autocomplete="off">
 
     <label for="nome">Nome</label>
-    <input type="text" id="nome" name="nome" required minlength="5" maxlength="45" 
-    placeholder="Ex: João da Silva" oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')">
+      <input 
+        type="text" 
+        id="nome" 
+        name="nome" 
+        required 
+        minlength="5" 
+        maxlength="45" 
+        placeholder="Ex: João da Silva" 
+        oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')">
 
     <label for="email">E-mail</label>
-    <input type="email" id="email" name="email" autocomplete="on" required maxlength="70"
-    placeholder="exemplo@email.com">
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        autocomplete="on" 
+        required 
+        maxlength="70"
+        placeholder="exemplo@email.com">
 
     <label for="tel">Telefone</label>
-    <input type="tel" name="tel" id="tel" required maxlength="11" 
-    placeholder="(xx) x xxxx - xxxx" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+      <input 
+        type="tel" 
+        name="tel" 
+        id="tel" 
+        required 
+        maxlength="11" 
+        placeholder="(xx) x xxxx - xxxx" 
+        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
+    <label for="cep">CEP</label>
+      <input
+        type="text"
+        id="cep"
+        name="cep"
+        required
+        maxlength="8"
+        placeholder="12345-678"
+        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
 
     <label for="nome_ong">Nome da ONG destinada a doação</label>
-    <input type="text" id="nome_ong" name="nome_ong" required minlength="5" maxlength="45" 
-    placeholder="Ex: Amigos da Comunidade">
+      <input 
+        type="text" 
+        id="nome_ong" 
+        name="nome_ong" 
+        required 
+        minlength="5" 
+        maxlength="45" 
+        placeholder="Ex: Amigos da Comunidade">
 
     <label for="tipoDoacao">Tipo de Doação</label>
-    <select id="tipoDoacao" name="tipoDoacao" required>
-      <option value=""> </option>
-      <option value="roupas">Roupas</option>
-      <option value="alimentos">Alimentos</option>
-      <option value="higiene">Produtos de Higiene</option>
-      <option value="outros">Outros</option>
-    </select>
+      <select id="tipoDoacao" name="tipoDoacao" required>
+        <option value=""> </option>
+        <option value="roupas">Roupas</option>
+        <option value="alimentos">Alimentos</option>
+        <option value="higiene">Produtos de Higiene</option>
+        <option value="outros">Outros</option>
+      </select>
 
     <label for="descricao_itens">Descrição dos itens</label>
-    <textarea id="necessidades" name="necessidades" rows="4" required
-    maxlength="400" placeholder="Descreva os itens que será doando (Ex: 5 camisas, 10 kg de arroz..."></textarea>
-
+      <textarea
+        id="necessidades"
+        name="necessidades"
+        rows="4"
+        maxlength="400"
+        required
+        placeholder="Descreva os itens que será doando (Ex: 5 camisas, 10 kg de arroz...)"></textarea>
 
     <input type="submit" value="Cadastrar">
 
@@ -119,6 +158,7 @@ export default {
   padding: 1rem;
   height: auto;
   resize: vertical;
+  text-align: left;
 }
 
 #formDoacao input:focus,
