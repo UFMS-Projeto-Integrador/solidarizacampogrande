@@ -70,6 +70,7 @@ export default {
   padding: 10px 10px;
   margin-left:5vw;
   margin-right:5vw;
+  margin-top:15vh;
 }
 
 #about-text {

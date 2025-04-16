@@ -1,5 +1,5 @@
 <template>
-    <div id="Header">
+    <div id="header" :class="{ scrolled: isScrolled }">
         <div id="img-logo">
             <router-link to="/" style="text-decoration: none; color: inherit;">
                <img src="@/assets/logo.svg" alt="Logo Solidariza CG">
@@ -23,8 +23,25 @@
 
 <script>
     export default {
-        name: 'Navbar',
+        name: 'Navbar',     
+  data() {                              // navBar --> Sombra ao scrollar a página
+    return {                            
+      isScrolled: false,
     }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      this.isScrolled = window.scrollY > 0
+    }
+  }
+}               
+
 </script>
 
 <style scoped>
@@ -32,6 +49,8 @@
     --color-nav: #007BFF;
     --color-font: black;
     --color-active: #FFCC29;
+    --color-background-nav:#fff;
+    --color-box-shadow-nav: rgba(0, 0, 0, 0.1);
 
     padding: 0;
     margin: 0;
@@ -40,15 +59,21 @@
 
 #img-logo img {
     width: 55vh;  
-    height: auto;  
+    height: auto;
 }
-
-#Header {
+#header {
+    width: 100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between; 
-    padding: 2vh 6vw 2vh 10vw; 
+    padding: 2vh 6vw 2vh 10vw;
+    position:fixed;
+   
+}
+#header.scrolled {                      /*navBar --> Sombra ao scrollar a página*/
+    background-color:var(--color-background-nav);
+    box-shadow: 0 2px 6px var(--color-box-shadow-nav);
 }
 
 #nav-container {
@@ -56,6 +81,8 @@
     align-items: center;
     gap: 20px;
     margin-left: 10vw;
+    position:fixed;
+    right:5vw;
 }
 
 #nav {
