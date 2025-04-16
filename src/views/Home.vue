@@ -67,20 +67,24 @@ export default {
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
-  padding: 10px 70px;
+  padding: 10px 10px;
+  margin-left:5vw;
+  margin-right:5vw;
 }
 
 #about-text {
   font-family: sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
+  margin-left:7vw;
+
 }
 
 #btn-doe {
   background-color: var(--color-submit);
-  margin-top: 40px;
-  padding: 10px 40px;
+  margin-top: 3vh;
+  padding: 10px 65px;
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 1.4rem;
   border: none;
   border-radius: 20px;
   color: var(--color-text-btn);
@@ -93,10 +97,49 @@ export default {
   background-color: var(--color-hover-submit);
 }
 
+#btn-doe { /*Animação da borda*/
+  background-color: var(--color-submit);
+  color: var(--color-text-btn);
+  border: none;
+  animation: piscar-borda 2.5s infinite;
+}
+
+@keyframes piscar-borda {
+  0% {
+    box-shadow: 0 0 0 2px #007BFF;
+  }
+  50% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 2px #007BFF;
+
+  }
+}
+
+#btn-doe:hover { /*Animação da borda do hover*/
+  border: none;
+  animation: borda-hover 2.5s infinite;
+}
+
+@keyframes borda-hover {
+  0% {
+    box-shadow: 0 0 0 2px #FFCC29;
+  }
+  50% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 2px #FFCC29;
+
+  }
+}
+
 #title-project {
   font-family: sans-serif;
   color: var(--color-title-h2);
   margin-top: 40px;
+  margin-left: 1vw;
 }
 
 #project {

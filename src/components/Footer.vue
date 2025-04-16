@@ -21,7 +21,7 @@
     background-color: var(--color-footer);
     color: var(--color-font);
     text-align: center;
-    padding: 22px;
+    padding: 1vh;
     font-size: 1.2rem;
     font-weight: 500;
 }
