@@ -102,6 +102,7 @@
   padding: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   min-height: 75vh;
+  margin-top:15vh;
 }
 
 .container h2 {

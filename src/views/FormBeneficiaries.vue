@@ -130,6 +130,7 @@
     padding: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
+    margin-top:15vh;
   }
   
   #ContainerBeneficiario h2 {
