@@ -55,6 +55,16 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between; 
+    padding: 2vh 6vw 2vh 10vw;
+    position:fixed;
+}
+
+#header.scrolled {                      /*navBar --> Sombra ao scrollar a página*/
+    background-color:var(--color-background-nav);
+    box-shadow: 0 2px 6px var(--color-box-shadow-nav);
+}
+
+#nav-container {
     padding: 2vh 5vh; 
     position: relative;
   }
@@ -104,80 +114,51 @@
   #foto-login {
     width: 30px;
     cursor: pointer; 
-  }
-  
-  .menu-overlay {
+}
+
+
+
+@media (max-width: 767px) {
+  #header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 998;
+    padding: 2vh 0;
+    background-color: var(--color-background-nav);
   }
-  
-  @media (max-width: 574px) {
-    .hamburger {
-      display: block;
-    }
-  
-    .nav-container {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 70%;
-      height: 100vh;
-      background-color: white;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding-top: 80px;
-      gap: 0;
-      transition: right 0.3s ease;
-      z-index: 1000;
-      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    }
-  
-    .nav-container.open {
-      right: 0;
-    }
-  
-    #nav {
-      flex-direction: column;
-      width: 100%;
-      border-radius: 0;
-      background-color: transparent;
-      padding: 0;
-    }
-  
-    #nav a {
-      margin: 15px 0;
-      color: #333;
-      font-size: 1.5rem;
-      width: 100%;
-      text-align: center;
-      padding: 10px;
-    }
-  
-    #nav a.router-link-active {
-      background-color: #007BFF;
-      color: yellow;
-      border-radius: 5px;
-    }
-  
-    #foto-login {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 40px;
-    }
-  
-    #img-logo img {
-      width: 30vh;  
-      height: auto;  
-    }
-    .login-link {
-        display: none;
-    }
+
+  #img-logo img {
+    width: clamp(150px,30vh, 450px);
+    height: auto;
+    margin: 0;
+    margin-top:0.5vh;
   }
-  </style>
+
+  #nav {
+    background-color: var(--color-nav);
+    padding: 10px;
+    border-radius: 28px;
+    font-weight: 100;
+    margin-top: 10vh;
+    width: 90%;
+    text-align: center;
+   font-size: 0.8rem;
+  }
+
+  #foto-login {
+    width: clamp(30px, 15vw,50px);
+    height: clamp(30px, 15vh,50px);
+    cursor: pointer;
+    margin-top: -15;
+    margin-right: 7vw;
+  }
+
+}
+
+
+</style>

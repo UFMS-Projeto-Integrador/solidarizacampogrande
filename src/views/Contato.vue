@@ -180,4 +180,11 @@ form button[type="submit"] {
 form button[type="submit"]:hover {
   background-color: var(--color-hover-submit);
 }
+
+/* ===================================== Media Query ================================================= */
+
+@media (max-width: 767px){
+	
+}
+
 </style>
