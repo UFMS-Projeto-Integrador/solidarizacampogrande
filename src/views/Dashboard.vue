@@ -1,5 +1,5 @@
 <template>
-    <h1>TESTE</h1>
+    <h1>SEM NADA AQUI</h1>
 </template>
 
 <script>
