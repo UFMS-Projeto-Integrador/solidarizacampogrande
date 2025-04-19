@@ -186,6 +186,9 @@ export default {
 /* ===================================== Media Query ================================================= */
 
 @media (max-width: 767px) {
+  body{
+    overflow-y: hidden;
+  }
   #about {
     display: flex;
     flex-direction: column;
@@ -208,7 +211,7 @@ export default {
     text-align: center;
     margin:0;
     margin-top: 1vh;
-    color:rgb(209, 93, 93);
+    
   }
 
   #btn-doe {
