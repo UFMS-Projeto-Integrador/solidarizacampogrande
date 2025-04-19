@@ -69,8 +69,8 @@
     justify-content: space-between; 
     padding: 2vh 6vw 2vh 10vw;
     position:fixed;
-   
 }
+
 #header.scrolled {                      /*navBar --> Sombra ao scrollar a página*/
     background-color:var(--color-background-nav);
     box-shadow: 0 2px 6px var(--color-box-shadow-nav);
@@ -111,4 +111,50 @@
     width: 30px;
     cursor: pointer; 
 }
+
+
+
+@media (max-width: 767px) {
+  #header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2vh 0;
+    background-color: var(--color-background-nav);
+  }
+
+  #img-logo img {
+    width: clamp(150px,30vh, 450px);
+    height: auto;
+    margin: 0;
+    margin-top:0.5vh;
+  }
+
+  #nav {
+    background-color: var(--color-nav);
+    padding: 10px;
+    border-radius: 28px;
+    font-weight: 100;
+    margin-top: 10vh;
+    width: 90%;
+    text-align: center;
+   font-size: 0.8rem;
+  }
+
+  #foto-login {
+    width: clamp(30px, 15vw,50px);
+    height: clamp(30px, 15vh,50px);
+    cursor: pointer;
+    margin-top: -15;
+    margin-right: 7vw;
+  }
+
+}
+
+
 </style>
