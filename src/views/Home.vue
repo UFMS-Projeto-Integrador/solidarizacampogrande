@@ -208,7 +208,7 @@ export default {
     text-align: center;
     margin:0;
     margin-top: 1vh;
-    color:rgb(158, 40, 40);
+    color:rgb(209, 93, 93);
   }
 
   #btn-doe {
