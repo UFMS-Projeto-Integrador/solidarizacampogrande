@@ -37,6 +37,6 @@ html, body{
 }
 
 .content {
-  flex: 1 0 auto;
+  flex: 2 0 auto;
 }
 </style>

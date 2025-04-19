@@ -179,4 +179,11 @@ export default {
   font-family: sans-serif;
   color: var(--color-font);
 }
+
+@media (max-width: 574px) {
+  
+  #about-img, #img-projeto {
+    display: none;
+  }
+}
 </style>
