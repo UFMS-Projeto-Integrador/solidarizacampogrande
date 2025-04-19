@@ -74,6 +74,7 @@
 #header.scrolled {                      /*navBar --> Sombra ao scrollar a página*/
     background-color:var(--color-background-nav);
     box-shadow: 0 2px 6px var(--color-box-shadow-nav);
+    height: 13vh;
 }
 
 #nav-container {
