@@ -6,8 +6,8 @@
       <div id="about-text">
           <div id="about-btn">
               <h3>Conectando Corações,<br> Transformando Vidas.</h3>
-              <button id="btn-doe" @click="goToForm">
-                  Doe Agora!
+              <button id="btn-ajuda" @click="FormBeneficiaries">
+                  Solicitar Ajuda!
               </button>
           </div>
       </div>
@@ -35,6 +35,11 @@
         </div>
       </div>
     </div>
+    <div id="div-doe">
+      <button id="btn-doe" @click="goToForm">
+                 Doe Agora!
+        </button>
+    </div>
   </div>
 </template>
 
@@ -44,8 +49,11 @@ export default {
   methods: {
     goToForm() {
       this.$router.push('/Doador')
+    },
+    FormBeneficiaries() {
+        this.$router.push('/Beneficiario')
+      }
     }
-  }
 }
 </script>
 
@@ -81,13 +89,19 @@ export default {
   font-size: 1.5rem;
   margin-left:7vw;
 }
+/* ***************************************************************************************************  */
+#div-doe{
+  margin-left: 69vw;
+  margin-bottom: 50px;
+}
 
-#btn-doe {
+/* **************************************************************************************************  */
+#btn-doe, #btn-ajuda {
   background-color: var(--color-submit);
   margin-top: 3vh;
   padding: 10px 65px;
   font-family: sans-serif;
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 1.5vw + 1.2rem,1.4rem);
   border: none;
   border-radius: 20px;
   color: var(--color-text-btn);
@@ -95,12 +109,12 @@ export default {
   transition: 0.3s ease;
 }
 
-#btn-doe:hover {
+#btn-doe:hover, #btn-ajuda:hover {
   color: var(--color-submit);
   background-color: var(--color-hover-submit);
 }
 
-#btn-doe { /*Animação da borda*/
+#btn-doe, #btn-ajuda{ /*Animação da borda*/
   background-color: var(--color-submit);
   color: var(--color-text-btn);
   border: none;
@@ -120,7 +134,7 @@ export default {
   }
 }
 
-#btn-doe:hover { /*Animação da borda do hover*/
+#btn-doe:hover, #btn-ajuda:hover { /*Animação da borda do hover*/
   border: none;
   animation: borda-hover 2.5s infinite;
 }
@@ -151,6 +165,7 @@ export default {
   align-items: center;
   padding: 22px;
   justify-content: space-around;
+  margin-bottom:50px;
 }
 
 #img-projeto img {
@@ -183,7 +198,7 @@ export default {
   color: var(--color-font);
 }
 
-/* ===================================== Media Query ================================================= */
+/* =================================== Media Query Mobile ============================================ */
 
 @media (max-width: 767px) {
   body{
@@ -214,7 +229,7 @@ export default {
     
   }
 
-  #btn-doe {
+  #btn-ajuda, #btn-doe {
     background-color: var(--color-submit);
     padding:10px 50px;
     font-family: sans-serif;
@@ -224,12 +239,14 @@ export default {
     color: var(--color-text-btn);
     margin: 10px;
   }
+
   #about-btn{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap:20px;
   }
+
   #about-img {
     display:none;
   }
@@ -238,15 +255,18 @@ export default {
     font-family: sans-serif;
     color: var(--color-title-h2);
     margin: 0;
+    margin-bottom: 20px;
     margin-top:clamp(15px, 20vh, 55px);
     font-size: clamp(1.5rem, 2.2vw + 1rem, 5rem);
     font-weight: 700;
   }
+
   #text-projeto {
     width: clamp(350px, 60vw, 850px);
     height: clamp(350px, 80vw, 850px);
     overflow: hidden;
   }
+
   #text-projeto p {
     text-align: justify;
     text-indent: 5vw;
@@ -257,6 +277,13 @@ export default {
     margin-top:clamp(-15px, -25vh, -35px);
     padding: 0 5px;
   }
+
+  #div-doe{
+  text-align: center;
+  margin: 0;
+  margin-bottom: 15px;
+  margin-top: -30px;
+ }
 
   #img-projeto {
     display: none;
@@ -272,5 +299,4 @@ export default {
     width: 100%;
   }
 }
-
 </style>

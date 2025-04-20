@@ -63,18 +63,21 @@
 }
 #header {
     width: 100vw;
+    height: 15vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between; 
     padding: 2vh 6vw 2vh 10vw;
     position:fixed;
+    
 }
 
 #header.scrolled {                      /*navBar --> Sombra ao scrollar a página*/
     background-color:var(--color-background-nav);
     box-shadow: 0 2px 6px var(--color-box-shadow-nav);
     height: 13vh;
+
 }
 
 #nav-container {
