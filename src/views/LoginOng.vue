@@ -10,8 +10,8 @@
         </div>
         <div id="form-login">
           <form>
-            <input type="email" placeholder="Login:" required autocomplete="on" />
-            <input type="password" placeholder="Senha:" />
+            <input type="email" placeholder="Digite seu E-mail" required autocomplete="on" />
+            <input type="password" placeholder="Digite sua Senha" required />
             <button type="submit">Acessar</button>
           </form>
         </div>
