@@ -40,6 +40,44 @@
                  Doe Agora!
         </button>
     </div>
+    <h2 id="time-h2">Conheça nosso time</h2>
+    <section id="time">
+
+      <div id="membro01">
+        <img id="macaco" src="@/assets/macaco.jpg" alt="*******">
+        <p id="nome-membro">Nome do Membro</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
+        <p id="funcao-membro">Função do Membro</p>
+      </div>
+
+      <div id="membro02">
+        <img id="macaco" src="@/assets/macaco.jpg" alt="*******">
+        <p id="nome-membro">Nome do Membro</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
+        <p id="funcao-membro">Função do Membro</p>
+      </div>
+
+      <div id="membro03">
+        <img id="macaco" src="@/assets/macaco.jpg" alt="*******">
+        <p id="nome-membro">Nome do Membro</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
+        <p id="funcao-membro">Função do Membro</p>
+      </div>
+
+      <div id="membro04">
+        <img id="macaco" src="@/assets/macaco.jpg" alt="*******">
+        <p id="nome-membro">Nome do Membro</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
+        <p id="funcao-membro">Função do Membro</p>
+      </div>
+
+      <div id="membro05">
+        <img id="macaco" src="@/assets/macaco.jpg" alt="*******">
+        <p id="nome-membro">Nome do Membro</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
+        <p id="funcao-membro">Função do Membro</p>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -89,13 +127,12 @@ export default {
   font-size: 1.5rem;
   margin-left:7vw;
 }
-/* ***************************************************************************************************  */
+
 #div-doe{
   margin-left: 69vw;
   margin-bottom: 50px;
 }
 
-/* **************************************************************************************************  */
 #btn-doe, #btn-ajuda {
   background-color: var(--color-submit);
   margin-top: 3vh;
@@ -196,6 +233,46 @@ export default {
   font-size: 18px;
   font-family: sans-serif;
   color: var(--color-font);
+}
+#time-h2{
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+  margin: 15px;
+}
+#time{
+  width: 100vw;
+  height: 50vh;
+  justify-content: center;
+  text-align: center;
+  display:flex;
+  gap: 40px;
+  font-family: sans-serif;
+  flex-direction: row;
+  background-color: rgb(255, 255, 255);
+}
+#membro01,#membro02,#membro03,#membro04,#membro05{
+  width: 250px;
+  height: 450px;
+  padding:20px;
+  margin: 15px;
+  background-color: rgb(209, 202, 202);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+#macaco{
+  width: 110px;
+  height: 110px;
+  margin-bottom: 10px;
+  border-radius: 150px;
+}
+#funcao-membro{
+  margin:15px;
+  font-weight: bolder;
+}
+#nome-membro{
+  margin:15px;
+  font-weight: bolder;
 }
 
 /* =================================== Media Query Mobile ============================================ */
