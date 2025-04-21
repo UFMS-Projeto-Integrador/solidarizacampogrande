@@ -40,47 +40,64 @@
                  Doe Agora!
         </button>
     </div>
-    <h2 id="time-h2">Conheça nosso time</h2>
+    
     <div id="nosso-time">
-      <div id="membro01">
-        <img id="macaco" src="@/assets/macaco.jpg" alt="*******">
+      <h2 id="time-h2">Conheça nosso time</h2>
+      <div id="membros">
+        <div id="membro">
+        <img id="user" src="@/assets/macaco.jpg" alt="*******">
+        <p id="nome-membro">Henrique Pereira</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
+        <p id="funcao-membro">Tech Lead</p>
+        <div id="redes">
+          <a href="https://www.linkedin.com/in/henrique-jose-pereira/" target="_blank">
+            <Icon icon="mdi:linkedin" width="24" height="24" color="#007BFF" />
+          </a>
+          <a href="https://github.com/HenriqueJP-Tech" target="_blank">
+            <Icon icon="mdi:github" width="24" height="24" color="#007BFF"/>
+          </a>
+          <a href="https://instagram.com/tech.rique" target="_blank">
+            <Icon icon="mdi:instagram" width="24" height="24" color="#007BFF" />
+          </a>
+        </div>
+      </div>
+
+      <div id="membro">
+        <img id="user" src="@/assets/macaco.jpg" alt="*******">
+        <p id="nome-membro">Nome do Membro</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
+        <p id="funcao-membro">Função do Membro</p>
+        
+      </div>
+
+      <div id="membro">
+        <img id="user" src="@/assets/macaco.jpg" alt="*******">
         <p id="nome-membro">Nome do Membro</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
         <p id="funcao-membro">Função do Membro</p>
       </div>
 
-      <div id="membro02">
-        <img id="macaco" src="@/assets/macaco.jpg" alt="*******">
+      <div id="membro">
+        <img id="user" src="@/assets/macaco.jpg" alt="*******">
         <p id="nome-membro">Nome do Membro</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
         <p id="funcao-membro">Função do Membro</p>
       </div>
 
-      <div id="membro03">
-        <img id="macaco" src="@/assets/macaco.jpg" alt="*******">
+      <div id="membro">
+        <img id="user" src="@/assets/macaco.jpg" alt="*******">
         <p id="nome-membro">Nome do Membro</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
         <p id="funcao-membro">Função do Membro</p>
       </div>
-
-      <div id="membro04">
-        <img id="macaco" src="@/assets/macaco.jpg" alt="*******">
-        <p id="nome-membro">Nome do Membro</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
-        <p id="funcao-membro">Função do Membro</p>
-      </div>
-
-      <div id="membro05">
-        <img id="macaco" src="@/assets/macaco.jpg" alt="*******">
-        <p id="nome-membro">Nome do Membro</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
-        <p id="funcao-membro">Função do Membro</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { Icon } from '@iconify/vue';
+
 export default {
   name: 'Home',
   methods: {
@@ -233,38 +250,51 @@ export default {
   font-family: sans-serif;
   color: var(--color-font);
 }
-#time-h2{
+
+#nosso-time{
+  width: 100vw;
+  height: 50vh;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  justify-content: center;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  gap: 40px;
+  font-family: sans-serif;
+}
+
+#nosso-time h2{
   text-align: center;
   font-size: 2rem;
   color: black;
   margin: 15px;
 }
-#time{
-  width: 100vw;
-  height: 50vh;
-  justify-content: center;
-  text-align: center;
-  display:flex;
-  gap: 40px;
-  font-family: sans-serif;
+
+#membros{
+  display: flex;
   flex-direction: row;
-  background-color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
 }
-#membro01,#membro02,#membro03,#membro04,#membro05{
+
+#membro{
   width: 250px;
   height: 450px;
   padding:20px;
   margin: 15px;
-  background-color: rgb(209, 202, 202);
+  background-color: #D2F4FE;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
 }
-#macaco{
+
+#user{
   width: 110px;
   height: 110px;
   margin-bottom: 10px;
   border-radius: 150px;
 }
+
 #funcao-membro{
   margin:15px;
   font-weight: bolder;
@@ -274,6 +304,11 @@ export default {
   font-weight: bolder;
 }
 
+#redes{
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
 /* =================================== Media Query Mobile ============================================ */
 
 @media (max-width: 767px) {
@@ -373,6 +408,18 @@ export default {
     font-size: clamp(0.8rem, 1.2vw + 0.8rem, 1.5rem);
     font-weight: 500;
     width: 100%;
+  }
+
+  #nosso-time{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10vh;
+    font-family: sans-serif;
+  }
+
+  #membros{
+    
   }
 }
 </style>
