@@ -47,7 +47,7 @@
         <div id="membro">
         <img id="user" src="@/assets/macaco.jpg" alt="*******">
         <p id="nome-membro">Henrique Pereira</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
+        <p>Liderando o time de desenvolvimento, designando tarefas e realizando grande parte também, atuando tanto no Front-End, bem como no Back-End.</p>
         <p id="funcao-membro">Tech Lead</p>
         <div id="redes">
           <a href="https://www.linkedin.com/in/henrique-jose-pereira/" target="_blank">
@@ -64,31 +64,74 @@
 
       <div id="membro">
         <img id="user" src="@/assets/macaco.jpg" alt="*******">
-        <p id="nome-membro">Nome do Membro</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
-        <p id="funcao-membro">Função do Membro</p>
-        
+        <p id="nome-membro">Luis Eduardo</p>
+        <p>Realizando as tarefas de desenvolvimento, sendo elas para desktop, bem como, para mobile, focando sempre na qualidade do projeto.</p>
+        <p id="funcao-membro">Web Developer</p>
+        <div id="redes">
+          <a href="https://www.linkedin.com/in/henrique-jose-pereira/" target="_blank">
+            <Icon icon="mdi:linkedin" width="24" height="24" color="#007BFF" />
+          </a>
+          <a href="https://github.com/HenriqueJP-Tech" target="_blank">
+            <Icon icon="mdi:github" width="24" height="24" color="#007BFF"/>
+          </a>
+          <a href="https://instagram.com/tech.rique" target="_blank">
+            <Icon icon="mdi:instagram" width="24" height="24" color="#007BFF" />
+          </a>
+        </div>
       </div>
 
       <div id="membro">
         <img id="user" src="@/assets/macaco.jpg" alt="*******">
-        <p id="nome-membro">Nome do Membro</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
-        <p id="funcao-membro">Função do Membro</p>
+        <p id="nome-membro">Wesley</p>
+        <p>Criação das artes da plataforma, bem como a elaboração dos protótipos a serem desenvolvidos pelo time de desenvolvimento da equipe.</p>
+        <p id="funcao-membro">Designer</p>
+        <div id="redes">
+          <a href="https://www.linkedin.com/in/henrique-jose-pereira/" target="_blank">
+            <Icon icon="mdi:linkedin" width="24" height="24" color="#007BFF" />
+          </a>
+          <a href="https://github.com/HenriqueJP-Tech" target="_blank">
+            <Icon icon="mdi:github" width="24" height="24" color="#007BFF"/>
+          </a>
+          <a href="https://instagram.com/tech.rique" target="_blank">
+            <Icon icon="mdi:instagram" width="24" height="24" color="#007BFF" />
+          </a>
+        </div>
       </div>
 
       <div id="membro">
         <img id="user" src="@/assets/macaco.jpg" alt="*******">
-        <p id="nome-membro">Nome do Membro</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
-        <p id="funcao-membro">Função do Membro</p>
+        <p id="nome-membro">Renan Ramiro</p>
+        <p>Atua garantindo que a equipe de desenvolvimento esteja focada em entregar a melhor plataforma para os usuários finais utilizarem.</p>
+        <p id="funcao-membro">Product Owner</p>
+        <div id="redes">
+          <a href="https://www.linkedin.com/in/henrique-jose-pereira/" target="_blank">
+            <Icon icon="mdi:linkedin" width="24" height="24" color="#007BFF" />
+          </a>
+          <a href="https://github.com/HenriqueJP-Tech" target="_blank">
+            <Icon icon="mdi:github" width="24" height="24" color="#007BFF"/>
+          </a>
+          <a href="https://instagram.com/tech.rique" target="_blank">
+            <Icon icon="mdi:instagram" width="24" height="24" color="#007BFF" />
+          </a>
+        </div>
       </div>
 
       <div id="membro">
         <img id="user" src="@/assets/macaco.jpg" alt="*******">
-        <p id="nome-membro">Nome do Membro</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
-        <p id="funcao-membro">Função do Membro</p>
+        <p id="nome-membro">Nayane Rios</p>
+        <p>Responsável por criar textos persuasivos para atrair usuários, engajar e fazer com que as informações cheguem de forma clara e objetiva.</p>
+        <p id="funcao-membro">Copywriter</p>
+        <div id="redes">
+          <a href="https://www.linkedin.com/in/henrique-jose-pereira/" target="_blank">
+            <Icon icon="mdi:linkedin" width="24" height="24" color="#007BFF" />
+          </a>
+          <a href="https://github.com/HenriqueJP-Tech" target="_blank">
+            <Icon icon="mdi:github" width="24" height="24" color="#007BFF"/>
+          </a>
+          <a href="https://instagram.com/tech.rique" target="_blank">
+            <Icon icon="mdi:instagram" width="24" height="24" color="#007BFF" />
+          </a>
+        </div>
       </div>
       </div>
     </div>
@@ -141,12 +184,11 @@ export default {
 #about-text {
   font-family: sans-serif;
   font-size: 1.5rem;
-  margin-left:7vw;
+  margin-left: 7vw;
 }
 
 #div-doe{
   margin-left: 69vw;
-  margin-bottom: 50px;
 }
 
 #btn-doe, #btn-ajuda {
@@ -160,6 +202,10 @@ export default {
   color: var(--color-text-btn);
   cursor: pointer;
   transition: 0.3s ease;
+}
+
+#btn-doe{
+  margin-top: 0.;
 }
 
 #btn-doe:hover, #btn-ajuda:hover {
@@ -281,11 +327,20 @@ export default {
 #membro{
   width: 250px;
   height: 450px;
-  padding:20px;
+  padding-top: 2vh;
   margin: 15px;
   background-color: #D2F4FE;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#membro p{
+  text-align: justify;
+  padding: 0 2vh;
+  margin: 2vh;
 }
 
 #user{
@@ -362,6 +417,11 @@ export default {
     display:none;
   }
 
+  #project{
+    display: flex;
+    flex-direction: column;
+  }
+
   #title-project {
     font-family: sans-serif;
     color: var(--color-title-h2);
@@ -400,6 +460,19 @@ export default {
     display: none;
   }
 
+  #nosso-time{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    font-family: sans-serif;
+  }
+
+  #membros{
+    display: flex;
+    flex-direction: column;
+  }
+
   #footer {
     background-color: var(--color-footer);
     color: var(--color-font);
@@ -410,16 +483,6 @@ export default {
     width: 100%;
   }
 
-  #nosso-time{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 10vh;
-    font-family: sans-serif;
-  }
-
-  #membros{
-    
-  }
+  
 }
 </style>
