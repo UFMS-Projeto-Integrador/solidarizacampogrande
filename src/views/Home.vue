@@ -41,8 +41,7 @@
         </button>
     </div>
     <h2 id="time-h2">Conheça nosso time</h2>
-    <section id="time">
-
+    <div id="nosso-time">
       <div id="membro01">
         <img id="macaco" src="@/assets/macaco.jpg" alt="*******">
         <p id="nome-membro">Nome do Membro</p>
@@ -77,7 +76,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam rerum, qui itaque deleniti sequi adipisci dolorem perspiciatis animi distinctio a nam exercitationem possimus, amet asperiores iure labore facere ullam.</p>
         <p id="funcao-membro">Função do Membro</p>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 
