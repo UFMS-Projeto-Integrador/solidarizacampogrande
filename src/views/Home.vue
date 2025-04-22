@@ -367,9 +367,6 @@ export default {
 /* =================================== Media Query Mobile ============================================ */
 
 @media (max-width: 767px) {
-  body{
-    overflow-y: hidden;
-  }
   #about {
     display: flex;
     flex-direction: column;
@@ -390,14 +387,13 @@ export default {
     font-family: sans-serif;
     font-size: clamp(1rem, 1.5vw + 0.8rem, 1.5rem); 
     text-align: center;
-    margin:0;
+    margin: 0;
     margin-top: 1vh;
-    
   }
 
   #btn-ajuda, #btn-doe {
     background-color: var(--color-submit);
-    padding:10px 50px;
+    padding: 10px 50px;
     font-family: sans-serif;
     font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
     border: none;
@@ -406,28 +402,22 @@ export default {
     margin: 10px;
   }
 
-  #about-btn{
+  #about-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:20px;
+    gap: 20px;
   }
 
   #about-img {
-    display:none;
-  }
-
-  #project{
-    display: flex;
-    flex-direction: column;
+    display: none;
   }
 
   #title-project {
     font-family: sans-serif;
     color: var(--color-title-h2);
-    margin: 0;
-    margin-bottom: 20px;
-    margin-top:clamp(15px, 20vh, 55px);
+    margin: 0 0 20px 0;
+    margin-top: clamp(15px, 20vh, 55px);
     font-size: clamp(1.5rem, 2.2vw + 1rem, 5rem);
     font-weight: 700;
   }
@@ -445,33 +435,41 @@ export default {
     font-family: sans-serif;
     color: var(--color-font);
     margin: 0;
-    margin-top:clamp(-15px, -25vh, -35px);
+    margin-top: clamp(-15px, -25vh, -35px);
     padding: 0 5px;
   }
 
-  #div-doe{
-  text-align: center;
-  margin: 0;
-  margin-bottom: 15px;
-  margin-top: -30px;
- }
+  #div-doe {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 15px;
+    margin-top: -30px;
+  }
 
   #img-projeto {
     display: none;
   }
+  #nosso-time {
+  height: auto;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  gap: 20px;
+  padding: 0 10px;
+}
+#time-h2{
+  font-size: 1rem;
+}
 
-  #nosso-time{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 10px;
-    font-family: sans-serif;
-  }
+#membros {
+  flex-direction: column;
+  gap: 25px;
+}
 
-  #membros{
-    display: flex;
-    flex-direction: column;
-  }
+#membro {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
 
   #footer {
     background-color: var(--color-footer);
@@ -482,7 +480,6 @@ export default {
     font-weight: 500;
     width: 100%;
   }
-
-  
 }
+
 </style>
