@@ -45,7 +45,7 @@
       <h2 id="time-h2">Conheça nosso time</h2>
       <div id="membros">
         <div id="membro">
-        <img id="user" src="@/assets/macaco.jpg" alt="*******">
+        <img id="user" src="@/assets/Henrique.png" alt="*******">
         <p id="nome-membro">Henrique Pereira</p>
         <p>Liderando o time de desenvolvimento, designando tarefas e realizando grande parte também, atuando tanto no Front-End, bem como no Back-End.</p>
         <p id="funcao-membro">Tech Lead</p>
@@ -63,72 +63,72 @@
       </div>
 
       <div id="membro">
-        <img id="user" src="@/assets/macaco.jpg" alt="*******">
+        <img id="user" src="@/assets/Luis.jpg" alt="*******">
         <p id="nome-membro">Luis Eduardo</p>
         <p>Realizando as tarefas de desenvolvimento, sendo elas para desktop, bem como, para mobile, focando sempre na qualidade do projeto.</p>
         <p id="funcao-membro">Web Developer</p>
         <div id="redes">
-          <a href="https://www.linkedin.com/in/henrique-jose-pereira/" target="_blank">
+          <a href="#" target="_blank">
             <Icon icon="mdi:linkedin" width="24" height="24" color="#007BFF" />
           </a>
-          <a href="https://github.com/HenriqueJP-Tech" target="_blank">
+          <a href="https://github.com/Luis-Edu01" target="_blank">
             <Icon icon="mdi:github" width="24" height="24" color="#007BFF"/>
           </a>
-          <a href="https://instagram.com/tech.rique" target="_blank">
+          <a href="https://www.instagram.com/luis_edu.le01/" target="_blank">
             <Icon icon="mdi:instagram" width="24" height="24" color="#007BFF" />
           </a>
         </div>
       </div>
 
       <div id="membro">
-        <img id="user" src="@/assets/macaco.jpg" alt="*******">
+        <img id="user" src="@/assets/Wesley.jpg" alt="*******">
         <p id="nome-membro">Wesley</p>
         <p>Criação das artes da plataforma, bem como a elaboração dos protótipos a serem desenvolvidos pelo time de desenvolvimento da equipe.</p>
         <p id="funcao-membro">Designer</p>
         <div id="redes">
-          <a href="https://www.linkedin.com/in/henrique-jose-pereira/" target="_blank">
+          <a href="#" target="_blank">
             <Icon icon="mdi:linkedin" width="24" height="24" color="#007BFF" />
           </a>
-          <a href="https://github.com/HenriqueJP-Tech" target="_blank">
+          <a href="#" target="_blank">
             <Icon icon="mdi:github" width="24" height="24" color="#007BFF"/>
           </a>
-          <a href="https://instagram.com/tech.rique" target="_blank">
+          <a href="#" target="_blank">
             <Icon icon="mdi:instagram" width="24" height="24" color="#007BFF" />
           </a>
         </div>
       </div>
 
       <div id="membro">
-        <img id="user" src="@/assets/macaco.jpg" alt="*******">
+        <img id="user" src="@/assets/Renan.jpg" alt="*******">
         <p id="nome-membro">Renan Ramiro</p>
         <p>Atua garantindo que a equipe de desenvolvimento esteja focada em entregar a melhor plataforma para os usuários finais utilizarem.</p>
         <p id="funcao-membro">Product Owner</p>
         <div id="redes">
-          <a href="https://www.linkedin.com/in/henrique-jose-pereira/" target="_blank">
+          <a href="https://www.linkedin.com/in/renan-ramiro-b3525b119/" target="_blank">
             <Icon icon="mdi:linkedin" width="24" height="24" color="#007BFF" />
           </a>
-          <a href="https://github.com/HenriqueJP-Tech" target="_blank">
+          <a href="https://github.com/RenanRamiro" target="_blank">
             <Icon icon="mdi:github" width="24" height="24" color="#007BFF"/>
           </a>
-          <a href="https://instagram.com/tech.rique" target="_blank">
+          <a href="https://www.instagram.com/renanramiro7/" target="_blank">
             <Icon icon="mdi:instagram" width="24" height="24" color="#007BFF" />
           </a>
         </div>
       </div>
 
       <div id="membro">
-        <img id="user" src="@/assets/macaco.jpg" alt="*******">
+        <img id="user" src="@/assets/Nayane.jpg" alt="*******">
         <p id="nome-membro">Nayane Rios</p>
         <p>Responsável por criar textos persuasivos para atrair usuários, engajar e fazer com que as informações cheguem de forma clara e objetiva.</p>
         <p id="funcao-membro">Copywriter</p>
         <div id="redes">
-          <a href="https://www.linkedin.com/in/henrique-jose-pereira/" target="_blank">
+          <a href="#" target="_blank">
             <Icon icon="mdi:linkedin" width="24" height="24" color="#007BFF" />
           </a>
-          <a href="https://github.com/HenriqueJP-Tech" target="_blank">
+          <a href="https://github.com/NayaneRios" target="_blank">
             <Icon icon="mdi:github" width="24" height="24" color="#007BFF"/>
           </a>
-          <a href="https://instagram.com/tech.rique" target="_blank">
+          <a href="#" target="_blank">
             <Icon icon="mdi:instagram" width="24" height="24" color="#007BFF" />
           </a>
         </div>
