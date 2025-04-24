@@ -74,14 +74,14 @@ cd solidarizacampogrande
 
 
 
-#### 1.2 Instale as dependências
+1.2 Instale as dependências
 
 ```PowerShell
 npm install
 npm install @iconify/vue
 
 
-##### 1.3 Execute o projeto em ambiente de desenvolvimento
+1.3 Execute o projeto em ambiente de desenvolvimento
 
 ```PowerShell
 npm run serve
