@@ -39,12 +39,15 @@ git clone https://github.com/UFMS-Projeto-Integrador/solidarizacampogrande.git
 cd solidarizacampogrande
 
 
+---
+
 ### 2. Instale as dependências
 
 ```PowerShell
 npm install
 npm install @iconify/vue
 
+---
 
 ### 3. Execute o projeto em ambiente de desenvolvimento
 
