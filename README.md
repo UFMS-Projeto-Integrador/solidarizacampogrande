@@ -73,7 +73,6 @@ git clone https://github.com/UFMS-Projeto-Integrador/solidarizacampogrande.git
 cd solidarizacampogrande
 
 
----
 
 #### 1.2 Instale as dependências
 
@@ -81,7 +80,6 @@ cd solidarizacampogrande
 npm install
 npm install @iconify/vue
 
----
 
 ##### 1.3 Execute o projeto em ambiente de desenvolvimento
 
