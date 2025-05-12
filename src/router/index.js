@@ -1,23 +1,24 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from "@/views/Home.vue"
-import FormBeneficiaries from '@/views/FormBeneficiaries.vue'
-import FormDonor from '@/views/FormDonor.vue'
-import FormOngs from '@/views/FormOngs.vue'
-import Contato from '@/views/Contato.vue'
-import LoginOng from '@/views/LoginOng.vue'
-import Dashboard from '@/views/Dashboard.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import { getAuth } from 'firebase/auth';
 
+import Home from "@/views/Home.vue";
+import FormBeneficiaries from '@/views/FormBeneficiaries.vue';
+import FormDonor from '@/views/FormDonor.vue';
+import FormOngs from '@/views/FormOngs.vue';
+import Contato from '@/views/Contato.vue';
+import LoginOng from '@/views/LoginOng.vue';
+import Dashboard from '@/views/Dashboard.vue';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
   },
   {
     path: '/Beneficiario',
     name: 'FormBeneficiaries',
-    component: FormBeneficiaries
+    component: FormBeneficiaries,
   },
   {
     path: '/Doador',
@@ -38,21 +39,32 @@ const routes = [
     path: '/Login',
     name: 'Login',
     component: LoginOng,
-    meta: {
-      hideNavbar: true,
-    }
+    meta: { hideNavbar: true },
   },
   {
     path: '/Dashboard',
     name: 'Dashboard',
-    component: Dashboard
-  }
-
-]
+    component: Dashboard,
+    meta: { requiresAuth: true }, // <-- Define que precisa de login
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+//  Verificação Global de Autenticação
+router.beforeEach((to, from, next) => {
+  const auth = getAuth();
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+  const currentUser = auth.currentUser;
+
+  if (requiresAuth && !currentUser) {
+    next('/Login'); // Redireciona para login se não estiver autenticado
+  } else {
+    next(); // Caso contrário, permite acesso
+  }
+});
+
+export default router;
