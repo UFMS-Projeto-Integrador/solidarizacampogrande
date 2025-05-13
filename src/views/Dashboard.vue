@@ -1,5 +1,5 @@
 <template>
-    <h1>mudando isso aqui  </h1>
+    <h1>mudando isso aqui</h1>
 </template>
 
 <script>
@@ -19,6 +19,5 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
 </style>

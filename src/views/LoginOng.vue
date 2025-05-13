@@ -83,7 +83,6 @@ export default {
   justify-content: center;
   min-height: 100vh;
   background-color: var(--color-login-area);
-  padding: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 

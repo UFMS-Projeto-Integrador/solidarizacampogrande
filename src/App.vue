@@ -5,7 +5,7 @@
     <main class="content">
       <router-view />
     </main>
-
+    
     <Footer v-if="!$route.meta.hideNavbar" />
   </div>
 </template>
