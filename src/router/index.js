@@ -52,7 +52,8 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-});
+}); 
+
 
 //  Verificação Global de Autenticação
 router.beforeEach((to, from, next) => {
