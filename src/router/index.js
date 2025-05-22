@@ -46,9 +46,9 @@ const routes = [
     name: 'Dashboard',
     component: Dashboard,
     meta: { requiresAuth: true }, // <-- Define que precisa de login
-  },
+    meta: { hideNavbar: true }, // <-- Adiciona ou remove o footer e header da página Dashboard
+    },
 ];
-
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
@@ -66,6 +66,6 @@ router.beforeEach((to, from, next) => {
   } else {
     next(); // Caso contrário, permite acesso
   }
-});
+});  
 
 export default router;

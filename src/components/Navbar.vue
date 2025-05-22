@@ -1,5 +1,5 @@
 <template>
-  <div id="header" :class="{ scrolled: isScrolled }">
+  <header id="header" :class="{ scrolled: isScrolled }">
       <div id="img-logo">
           <router-link to="/" style="text-decoration: none; color: inherit;">
              <img src="@/assets/logo.svg" alt="Logo Solidariza CG">
@@ -25,7 +25,7 @@
               <img src="@/assets/login.png" alt="Foto login" id="foto-login">
           </router-link>
       </div>
-  </div>
+  </header>
 </template>
 
 <script>
