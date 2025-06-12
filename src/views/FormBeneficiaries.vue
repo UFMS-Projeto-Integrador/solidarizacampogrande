@@ -4,34 +4,78 @@
   
       <form id="formBeneficiario" @submit="enviarFormulario" autocomplete="off">
         <label for="nome">Nome</label>
-        <input id="nome" v-model="nome" required minlength="5" maxlength="45" placeholder="Ex: João da Silva" />
+        <input id="nome" 
+        v-model="nome" 
+        required minlength="5"
+        maxlength="45"
+        placeholder="Ex: João da Silva" />
 
         <label for="cpf">CPF</label>
-        <input id="cpf" v-model="cpf" required maxlength="11" placeholder="xxxxxxxxxxx" />
+        <input id="cpf" 
+        v-model="cpf" 
+        required 
+        maxlength="11" 
+        placeholder="xxxxxxxxxxx" />
 
         <label for="email">E-mail</label>
-        <input id="email" v-model="email" type="email" required maxlength="70" placeholder="exemplo@email.com" />
+        <input id="email" 
+        v-model="email" 
+        type="email" 
+        required 
+        maxlength="70" 
+        placeholder="exemplo@email.com" />
 
         <label for="tel">Telefone</label>
-        <input id="tel" v-model="tel" required maxlength="11" placeholder="(xx) x xxxx - xxxx" />
+        <input id="tel" 
+        v-model="tel" 
+        required 
+        maxlength="11" 
+        placeholder="(xx) x xxxx - xxxx" />
 
         <label for="cep">CEP</label>
-        <input id="cep" v-model="cep" required maxlength="8" placeholder="12345678" />
+        <input id="cep" 
+        v-model="cep" 
+        required 
+        maxlength="8" 
+        placeholder="12345678" />
 
         <label for="endereco">Endereço</label>
-        <input id="endereco" v-model="endereco" required minlength="5" maxlength="50" placeholder="Rua: exemplo Nº 123" />
+        <input id="endereco" 
+        v-model="endereco" 
+        required 
+        minlength="5" 
+        maxlength="50" 
+        placeholder="Rua: exemplo Nº 123" />
 
         <label for="bairro">Bairro</label>
-        <input id="bairro" v-model="bairro" required minlength="3" maxlength="50" placeholder="Vila: exemplo" />
+        <input id="bairro" 
+        v-model="bairro" 
+        required 
+        minlength="3" 
+        maxlength="50" 
+        placeholder="Vila: exemplo" />
 
         <label for="referencia">Ponto de Referência</label>
-        <input id="referencia" v-model="referencia" required minlength="5" maxlength="50" placeholder="Próximo a ..." />
+        <input id="referencia" 
+        v-model="referencia" 
+        required minlength="5" 
+        maxlength="50" 
+        placeholder="Próximo a ..." />
 
         <label for="familiares">Número de moradores na residência</label>
-        <input id="familiares" v-model="familiares" required maxlength="2" placeholder="Ex: 3" />
+        <input id="familiares" 
+        v-model="familiares" 
+        required 
+        maxlength="2" 
+        placeholder="Ex: 3" />
 
         <label for="necessidades">Necessidades</label>
-        <textarea id="necessidades" v-model="necessidades" rows="4" required maxlength="400" placeholder="Descreva o que está precisando..."></textarea>
+        <textarea id="necessidades" 
+        v-model="necessidades" 
+        rows="4" 
+        required 
+        maxlength="400" 
+        placeholder="Descreva o que está precisando..."></textarea>
 
         <input type="submit" value="Cadastrar" />
       </form>
@@ -147,10 +191,9 @@
     font-weight: 500;
   }
   
-  #formBeneficiario input[type='text'],
-  #formBeneficiario input[type='email'],
-  #formBeneficiario input[type='tel'],
-  #formBeneficiario textarea,
+  #formBeneficiario textarea, #nome,
+  #cpf, #cep, #endereco, #bairro, #referencia,
+  #familiares, #tel, #email,
   #formBeneficiario select {
     width: 100%;
     padding: 0rem 1rem;
@@ -177,7 +220,7 @@
     outline: none;
   }
   
-  #formBeneficiario input::placeholder,
+  #formBeneficiario v-model::placeholder,
   #formBeneficiario textarea::placeholder {
     color: var(--color-font-placeholder);
     text-align: left;
