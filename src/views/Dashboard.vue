@@ -38,7 +38,36 @@
       </header>
 
       <div id="crud">
-        <h1>Tabelas aqui</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>CEP</th>
+                <th>Endereço</th>
+                <th>Bairro</th>
+                <th>Referência</th>
+                <th>Família</th>
+                <th>Necessidades</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="b in beneficiarios" :key="b.id">
+                <td>{{ b.nome }}</td>
+                <td>{{ b.cpf }}</td>
+                <td>{{ b.email }}</td>
+                <td>{{ b.tel }}</td>
+                <td>{{ b.cep }}</td>
+                <td>{{ b.endereco }}</td>
+                <td>{{ b.bairro }}</td>
+                <td>{{ b.referencia }}</td>
+                <td>{{ b.familiares }}</td>
+                <td>{{ b.necessidades }}</td>
+              </tr>
+            </tbody>
+          </table>
       </div>
     </div>
   </section>
@@ -46,45 +75,65 @@
 
 <script>
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import { db } from '@/firebase' // ajuste o caminho se necessário
+import { collection, getDocs } from 'firebase/firestore'
 
 export default {
   name: "Dashboard",
   data() {
     return {
+      beneficiarios: [],
       emailUsuario: "",
       carregando: true,
       unsubscribe: null
     };
   },
   methods: {
-   async handleLogout() {
+    async handleLogout() {
       try {
         const auth = getAuth();
-        await signOut(auth); // Desloga o usuário
-        this.$router.push({ name: 'LoginOng' }); // Redireciona para LoginOng
+        await signOut(auth);
+        this.$router.push({ name: 'LoginOng' });
       } catch (error) {
         console.error("Erro ao fazer logout:", error);
         alert("Ocorreu um erro ao tentar sair. Por favor, tente novamente.");
       }
+    },
+
+    async carregarBeneficiarios() {
+      try {
+        const querySnapshot = await getDocs(collection(db, "beneficiariosdb"));
+        this.beneficiarios = querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+      } catch (error) {
+        console.error("Erro ao carregar beneficiários:", error);
+        alert("Erro ao carregar dados dos beneficiários.");
+      }
     }
   },
+
   async mounted() {
     const auth = getAuth();
-    
-    // Usamos setTimeout para evitar problemas de hidratação
+
     setTimeout(() => {
-      this.unsubscribe = onAuthStateChanged(auth, (usuario) => {
+      this.unsubscribe = onAuthStateChanged(auth, async (usuario) => {
         this.carregando = false;
-        
+
         if (!usuario) {
           this.$router.push("/login");
           return;
         }
-        
+
         this.emailUsuario = usuario.email;
+
+        // 🔥 Carrega os beneficiários após autenticação
+        await this.carregarBeneficiarios();
       });
     }, 100);
   },
+
   beforeUnmount() {
     if (this.unsubscribe) {
       this.unsubscribe();
@@ -92,6 +141,7 @@ export default {
   }
 };
 </script>
+
 
 <style scoped>
 * {
@@ -205,4 +255,24 @@ export default {
   border-left: 2px solid black;
   background-color: #fff;
 }
+
+#crud table {
+  width: 90%;
+  border-collapse: collapse;
+  background-color: white;
+  font-size: 0.95rem;
+}
+
+#crud th, #crud td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+#crud th {
+  background-color: #007bff;
+  color: white;
+}
 </style>
+
+
