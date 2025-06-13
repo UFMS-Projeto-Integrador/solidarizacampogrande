@@ -206,7 +206,7 @@ export default {
   align-items: center;
   padding: 0 20px;
   flex-direction: row;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 #input-search {
