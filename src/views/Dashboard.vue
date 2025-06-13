@@ -4,22 +4,18 @@
   </section>
   
   <section v-else id="layout">
-    <aside id="navigation">
+
+    <div class="main">
+      <header id="search">
       <div id="profile">
         <img id="logo" src="@/assets/logo.svg" alt="logo" />
       </div>
+
       <div id="navigations">
         <button id="button">Beneficiario</button>
         <button id="button">Doador</button>
         <button id="button">ONG</button>
       </div>
-      <div>
-        <button id="button-logout" @click="handleLogout">Logout</button>
-      </div>
-    </aside>
-
-    <div class="main">
-      <header id="search">
         <div>
           <input
             id="input-search"
@@ -35,6 +31,11 @@
           <h1>{{ emailUsuario }}</h1>
         </div>
         <img id="logo-user" src="@/assets/login.png" alt="usuário" />
+
+      <div>
+        <button id="button-logout" @click="handleLogout">Logout</button>
+      </div>
+
       </header>
 
       <div id="crud">
@@ -154,17 +155,7 @@ export default {
   display: flex;
   height: 100vh;
 }
-#navigation {
-  width: 20vw;
-  background-color: #007bff;
-  display: flex;
-  flex-direction: column;
-}
 
-#profile {
-  background-color: #f5f3f3;
-  border-bottom: 2px solid black;
-}
 
 #logo {
   width: 20vw;
@@ -172,37 +163,25 @@ export default {
 }
 
 #navigations {
-  background-color: #007bff;
-  flex-direction: column;
+  flex-direction: row;
   display: flex;
-  gap: 5px;
+  gap: 15px;
   margin-top: 1px;
 }
 
 #button {
   font-size: 1.3rem;
   padding: 5px;
-  color: white;
-  background-color: #007bff;
+  color: black;
   border: none;
-  border: 0.5px solid white;
-}
-#button:hover {
-  background-color: #ffcc29;
 }
 
 #button-logout {
-  margin-top: 58.4vh;
   text-align: center;
   font-size: 1.3rem;
-  width: 20vw;
   padding: 5px;
-  background-color: #007bff;
-  color: white;
-  border: 0.5px solid white;
-}
-#button-logout:hover {
-  background-color: #ffcc29;
+  color: black;
+
 }
 
 .main {
@@ -223,7 +202,7 @@ export default {
 }
 #input-search {
   padding: 6px;
-  margin-left: 25vw;
+  margin-left: 5vw;
   border-radius: 10px 0 0 10px;
 }
 #button-search {
@@ -233,19 +212,18 @@ export default {
   padding: 6px;
   margin-right: 15vw;
   border: none;
-  border-radius: 1px 10px 10px 1px;
+  
 }
 #user {
-  padding: 35px 10px;
+  padding: 25px 10px;
   text-align: center;
-  border-left: 2px solid black;
+  
 }
 
 #logo-user {
   width: 3vw;
   height: 6vh;
 }
-
 #crud {
   flex: 1;
   display: flex;
