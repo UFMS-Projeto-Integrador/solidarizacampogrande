@@ -159,7 +159,7 @@ export default {
 
 
 #logo {
-  width: 18vw;
+  width: 20vw;
   height: 15vh;
   margin-right: 5vh;
 }
@@ -213,7 +213,7 @@ export default {
 
 #input-search {
   padding: 6px;
-  margin-left: 5px;
+  margin-left: 3vw;
   border-radius: 10px 0 0 10px;
 }
 
@@ -222,7 +222,7 @@ export default {
   color: white;
   font-size: 1rem;
   padding: 6px;
-  margin-right: 5px;
+  margin-right: 2vw;
   border: none;
   border-radius: 0 10px 10px 0;
   
