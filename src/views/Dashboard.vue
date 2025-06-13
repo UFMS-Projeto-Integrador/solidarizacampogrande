@@ -212,7 +212,7 @@ export default {
 
 #input-search {
   padding: 6px;
-  margin-left: 2vw;
+  margin-left: 1vw;
   border-radius: 10px 0 0 10px;
 }
 
@@ -221,7 +221,7 @@ export default {
   color: white;
   font-size: 1rem;
   padding: 6px;
-  margin-right: 2vw;
+  margin-right: 1vw;
   border: none;
   border-radius: 0 10px 10px 0;
   
@@ -229,13 +229,13 @@ export default {
 #user {
   padding: 25px 10px;
   text-align: center;
-  
+  font-size: 1rem;
 }
 
 #logo-user {
   width: 3vw;
   height: 6vh;
-  margin: 0 15px;
+  margin: 0 10px;
 }
 #crud {
   flex: 1;
