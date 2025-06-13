@@ -167,6 +167,7 @@ export default {
   flex-direction: row;
   display: flex;
   margin-top: 1px;
+  
 }
 
 #button {
@@ -206,12 +207,12 @@ export default {
   align-items: center;
   padding: 0 20px;
   flex-direction: row;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
 }
 
 #input-search {
   padding: 6px;
-  margin-left: 5vw;
+  margin-left: 2vw;
   border-radius: 10px 0 0 10px;
 }
 
@@ -220,7 +221,7 @@ export default {
   color: white;
   font-size: 1rem;
   padding: 6px;
-  margin-right: 5vw;
+  margin-right: 2vw;
   border: none;
   border-radius: 0 10px 10px 0;
   
