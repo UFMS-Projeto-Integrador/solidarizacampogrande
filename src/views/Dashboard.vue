@@ -25,7 +25,7 @@
           />
         </div>
         <div>
-          <button id="button-search">Pesquisa</button>
+          <button id="button-search">Pesquisar</button>
         </div>
         <div id="user">
           <h1>{{ emailUsuario }}</h1>
@@ -160,28 +160,37 @@ export default {
 #logo {
   width: 20vw;
   height: 15vh;
+  margin-right: 5vh;
 }
 
 #navigations {
   flex-direction: row;
   display: flex;
-  gap: 15px;
   margin-top: 1px;
 }
 
 #button {
-  font-size: 1.3rem;
-  padding: 5px;
-  color: black;
+  font-size: 1.5rem;
+  padding: 15px;
+  color: #007bff;
   border: none;
+  cursor:pointer;
+}
+#button:hover{
+  color: #FFCC29;
 }
 
 #button-logout {
   text-align: center;
+  background-color: #f5f3f3;
   font-size: 1.3rem;
-  padding: 5px;
-  color: black;
-
+  padding: 15px;
+  color: #007bff;
+  border: none;
+  cursor:pointer;
+}
+#button-logout:hover{
+  color: #FFCC29; 
 }
 
 .main {
@@ -191,27 +200,28 @@ export default {
 }
 
 #search {
-  height: 15.9vh;
   background-color: #f5f3f3;
   display: flex;
   align-items: center;
   padding: 0 20px;
-  color: black;
   flex-direction: row;
-  border-bottom: 2px solid black;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
+
 #input-search {
   padding: 6px;
   margin-left: 5vw;
   border-radius: 10px 0 0 10px;
 }
+
 #button-search {
   background-color: #007bff;
   color: white;
   font-size: 1rem;
   padding: 6px;
-  margin-right: 15vw;
+  margin-right: 5vw;
   border: none;
+  border-radius: 0 10px 10px 0;
   
 }
 #user {
@@ -223,22 +233,26 @@ export default {
 #logo-user {
   width: 3vw;
   height: 6vh;
+  margin: 0 15px;
 }
 #crud {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
   color: black;
   border-left: 2px solid black;
   background-color: #fff;
+  padding-top: 2.5rem;
 }
 
 #crud table {
   width: 90%;
+  height: 15%;
   border-collapse: collapse;
   background-color: white;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 #crud th, #crud td {
