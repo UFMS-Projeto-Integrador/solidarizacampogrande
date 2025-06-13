@@ -175,6 +175,7 @@ export default {
   color: #007bff;
   border: none;
   cursor:pointer;
+  background-color: #f5f3f3;
 }
 #button:hover{
   color: #FFCC29;
