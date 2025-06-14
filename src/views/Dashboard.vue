@@ -7,15 +7,24 @@
 
     <div class="main">
       <header id="search">
-      <div id="profile">
-        <img id="logo" src="@/assets/logo.svg" alt="logo" />
-      </div>
+        <div id="profile">
+          <img id="logo" src="@/assets/logo.svg" alt="logo" />
+        </div>
 
-      <div id="navigations">
-        <button id="button">Beneficiario</button>
-        <button id="button">Doador</button>
-        <button id="button">ONG</button>
-      </div>
+        <div id="user-group">
+          <h1 id="user-email">{{ emailUsuario }}</h1>
+          <img id="logo-user" src="@/assets/login.png" alt="usuário" />
+          <button id="button-logout" @click="handleLogout">Logout</button>
+        </div>
+      </header>
+
+      <div id="busca">
+        <div id="navigations">
+          <h1>Filtrar por:</h1>
+          <button id="button">Beneficiario</button>
+          <button id="button">Doador</button>
+          <button id="button">ONG</button>
+        </div>
         <div>
           <input
             id="input-search"
@@ -25,19 +34,9 @@
           />
         </div>
         <div>
-          <button id="button-search">Pesquisar</button>
+        <button id="button-search">Pesquisar</button>
         </div>
-        <div id="user">
-          <h1>{{ emailUsuario }}</h1>
-        </div>
-        <img id="logo-user" src="@/assets/login.png" alt="usuário" />
-
-      <div>
-        <button id="button-logout" @click="handleLogout">Logout</button>
       </div>
-
-      </header>
-
       <div id="crud">
           <table>
             <thead>
@@ -149,7 +148,10 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 100%;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 #layout {
@@ -157,95 +159,122 @@ export default {
   height: 100vh;
 }
 
+#search {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+
+}
 
 #logo {
-  width: 20vw;
-  height: 15vh;
-  margin-right: 5vh;
+  max-width: 300px;
+  max-height: 100px;
+  margin-left: 15vh;
 }
 
-#navigations {
-  flex-direction: row;
+#user-group {
   display: flex;
-  margin-top: 1px;
-  
+  align-items: center;
+  gap: 15px; /* distância entre email, ícone e botão */
 }
 
-#button {
+#user-email {
   font-size: 1.5rem;
-  padding: 15px;
-  color: #007bff;
-  border: none;
-  cursor:pointer;
-  background-color: #f5f3f3;
+  font-weight: 600;
+  color: #1c1c1c;
+  text-align: right;
 }
-#button:hover{
-  color: #FFCC29;
+
+#logo-user {
+  width: 35px;
+  height: 35px;
+}
+
+.main {
+  flex: 1;
+  width: 100vw;
 }
 
 #button-logout {
   text-align: center;
-  background-color: #f5f3f3;
+  background-color: white;
   font-size: 1.3rem;
   padding: 15px;
   color: #007bff;
   border: none;
   cursor:pointer;
+  transition: all .6s ease;
+  margin-right: 5vw;
 }
 #button-logout:hover{
   color: #FFCC29; 
 }
 
-.main {
-  flex: 1;
+
+#navigations {
+  flex-direction: row;
   display: flex;
-  flex-direction: column;
 }
 
-#search {
-  background-color: #f5f3f3;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
+#navigations h1{
+  margin-top: 20px;
+  margin-left: 5vw;
+  text-align: center;
+}
+
+#button {
+  font-size: 1.4rem;
+  padding: 0 10px;
+  color: #007bff;
+  border: none;
+  cursor:pointer;
+  background-color: white;
+  transition: all .6s ease;
+  margin-top: 20px;
+}
+#button:hover{
+  color: #FFCC29;
+}
+
+#busca{
+  display:flex;
   flex-direction: row;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  align-items:center;
+  margin-left:15vw;
 }
 
 #input-search {
+  width: 300px;
   padding: 6px;
-  margin-left: 3vw;
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px 10px;
+  border-color: #007bff;
+  margin-top: 23px;
+  margin-left:15vw;
+  z-index:1;
 }
 
 #button-search {
+  z-index:2;
+  margin-top: 23px;
   background-color: #007bff;
   color: white;
   font-size: 1rem;
   padding: 6px;
-  margin-right: 2vw;
   border: none;
   border-radius: 0 10px 10px 0;
-  
-}
-#user {
-  padding: 25px 10px;
-  text-align: center;
-  font-size: 1rem;
-}
-
-#logo-user {
-  width: 3vw;
-  height: 6vh;
-  margin: 0 10px;
+  cursor: pointer;
+  margin-left: -84px;
 }
 #crud {
   flex: 1;
   display: flex;
   justify-content: center;
   color: black;
-  border-left: 2px solid black;
   background-color: #fff;
-  padding-top: 2.5rem;
+  padding-top: 1.5rem;
 }
 
 #crud table {
