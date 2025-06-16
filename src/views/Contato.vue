@@ -23,7 +23,7 @@
           name="email"
           v-model="form.email"
           required
-          maxlength="70"
+          maxlength="40"
           placeholder="exemplo@email.com"
         />
   

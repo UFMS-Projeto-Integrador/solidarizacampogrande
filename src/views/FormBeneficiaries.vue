@@ -8,21 +8,24 @@
         v-model="nome" 
         required minlength="5"
         maxlength="45"
-        placeholder="Ex: João da Silva" />
+        placeholder="Ex: João da Silva" 
+        oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')"/>
 
         <label for="cpf">CPF</label>
         <input id="cpf" 
         v-model="cpf" 
         required 
         maxlength="11" 
-        placeholder="xxxxxxxxxxx" />
+        placeholder="xxxxxxxxxxx"
+        oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+        
 
         <label for="email">E-mail</label>
         <input id="email" 
         v-model="email" 
         type="email" 
         required 
-        maxlength="70" 
+        maxlength="40" 
         placeholder="exemplo@email.com" />
 
         <label for="tel">Telefone</label>
@@ -30,14 +33,16 @@
         v-model="tel" 
         required 
         maxlength="11" 
-        placeholder="(xx) x xxxx - xxxx" />
+        placeholder="(xx) x xxxx - xxxx" 
+        oninput="this.value = this.value.replace(/[^0-9]/g, '')"/>
 
         <label for="cep">CEP</label>
         <input id="cep" 
         v-model="cep" 
         required 
         maxlength="8" 
-        placeholder="12345678" />
+        placeholder="12345678" 
+        oninput="this.value = this.value.replace(/[^0-9]/g, '')"/>
 
         <label for="endereco">Endereço</label>
         <input id="endereco" 
@@ -52,7 +57,7 @@
         v-model="bairro" 
         required 
         minlength="3" 
-        maxlength="50" 
+        maxlength="25" 
         placeholder="Vila: exemplo" />
 
         <label for="referencia">Ponto de Referência</label>
@@ -67,7 +72,8 @@
         v-model="familiares" 
         required 
         maxlength="2" 
-        placeholder="Ex: 3" />
+        placeholder="Ex: 3"
+        oninput="this.value = this.value.replace(/[^0-9]/g, '')"/>
 
         <label for="necessidades">Necessidades</label>
         <textarea id="necessidades" 
@@ -163,7 +169,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
     margin-top:15vh;
-  }
+  } 
   
   #ContainerBeneficiario h2 {
     font-size: 2rem;

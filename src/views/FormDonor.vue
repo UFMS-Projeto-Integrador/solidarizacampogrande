@@ -23,7 +23,7 @@
         name="email" 
         autocomplete="on" 
         required 
-        maxlength="70"
+        maxlength="40"
         placeholder="exemplo@email.com">
 
     <label for="tel">Telefone</label>
@@ -72,7 +72,7 @@
         rows="4"
         maxlength="400"
         required
-        placeholder="Descreva os itens que será doando (Ex: 5 camisas, 10 kg de arroz...)"></textarea>
+        placeholder="Descreva os itens que será doando (Ex: 5 camisas tamanho M, 10 kg de arroz...)"></textarea>
 
     <input type="submit" value="Cadastrar">
 

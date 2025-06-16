@@ -13,7 +13,8 @@
               required 
               minlength="1" 
               maxlength="30" 
-              placeholder="Ex: Amigos da Comunidade" oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')">
+              placeholder="Ex: Amigos da Comunidade" 
+              oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')">
 
           <label for="cnpj_ong">CNPJ</label>
             <input 
@@ -31,7 +32,7 @@
               name="email_ong" 
               autocomplete="on" 
               required
-              maxlength="70" 
+              maxlength="40" 
               placeholder="exemplo@email.com">
 
           <label for="tel_ong">Telefone</label>

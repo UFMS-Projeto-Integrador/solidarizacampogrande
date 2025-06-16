@@ -150,10 +150,6 @@ export default {
   box-sizing: border-box;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
 #layout {
   display: flex;
   height: 100vh;
@@ -288,14 +284,28 @@ html, body {
 }
 
 #crud th, #crud td {
-  border: 1px solid #ccc;
+  border: 2px solid #000;
   padding: 8px;
   text-align: left;
+  word-wrap: break-word; /* quebra de palavras longas */
+  white-space: normal;   /* permite a quebra de linha */
+  max-width: 100px;      /* define uma largura máxima para forçar a quebra */
 }
 
 #crud th {
   background-color: #007bff;
   color: white;
+}
+
+                                  /*Teste de animação por linha*/
+
+#crud tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Efeito de hover na linha para realce visual */
+#crud tr:hover {
+  background-color: rgba(19, 161, 243, 0.281);
 }
 </style>
 
