@@ -11,7 +11,7 @@
           v-model="form.nome"
           required
           minlength="5"
-          maxlength="45"
+          maxlength="75"
           placeholder="Ex: João da Silva"
           @input="somenteLetras($event)"
         />
@@ -46,7 +46,7 @@
             name="mensagem"
             v-model="form.mensagem"
             rows="4"
-            maxlength="500"
+            maxlength="250"
             required
             placeholder="Descrição do assunto">
           </textarea>

@@ -7,7 +7,7 @@
         <input id="nome" 
         v-model="nome" 
         required minlength="5"
-        maxlength="45"
+        maxlength="75"
         placeholder="Ex: João da Silva" 
         oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')"/>
 
@@ -80,7 +80,7 @@
         v-model="necessidades" 
         rows="4" 
         required 
-        maxlength="400" 
+        maxlength="150" 
         placeholder="Descreva o que está precisando..."></textarea>
 
         <input type="submit" value="Cadastrar" />

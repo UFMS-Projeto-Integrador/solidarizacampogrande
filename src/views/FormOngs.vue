@@ -11,7 +11,7 @@
               id="nome_ong" 
               name="nome_ong" 
               required 
-              minlength="1" 
+              minlength="1"
               maxlength="30" 
               placeholder="Ex: Amigos da Comunidade" 
               oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')">

@@ -12,7 +12,7 @@
         name="nome" 
         required 
         minlength="5" 
-        maxlength="45" 
+        maxlength="75" 
         placeholder="Ex: João da Silva" 
         oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')">
 
@@ -70,7 +70,7 @@
         id="necessidades"
         name="necessidades"
         rows="4"
-        maxlength="400"
+        maxlength="150"
         required
         placeholder="Descreva os itens que será doando (Ex: 5 camisas tamanho M, 10 kg de arroz...)"></textarea>
 
